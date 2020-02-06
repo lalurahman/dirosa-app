@@ -9,6 +9,7 @@ class AdminController extends CI_Controller
         $data['title'] = 'Dashboard - DirosApp';
         $this->load->view('admin/inc/header', $data);
         $this->load->view('admin/inc/sidebar');
-        $this->load->view('admin/index');
+        $this->load->view('admin/dashboard');
+        $this->load->view('admin/inc/footer');
     }
 }
