@@ -9,7 +9,7 @@ class Home extends CI_Controller
         $data['title'] = 'Home - DirosApp';
         // $this->load->view('template/inc/header', $data);
         // $this->load->view('template/inc/sidebar');
-        $this->load->view('template/home');
+        $this->load->view('template/home', $data);
         // $this->load->view('template/inc/footer');
     }
 }

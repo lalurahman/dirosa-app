@@ -18,7 +18,7 @@
     <!-- Favicons-->
     <link rel="icon" href="<?= base_url('assets/admin/') ?>images/favicon/favicon-32x32.png" sizes="32x32">
     <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <!-- <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png"> -->
     <!-- For iPhone -->
     <meta name="msapplication-TileColor" content="#00bcd4">
     <meta name="msapplication-TileImage" content="<?= base_url('assets/admin/') ?>images/favicon/mstile-144x144.png">
@@ -29,7 +29,7 @@
     <!-- Custome CSS-->
     <!-- <link href="<?= base_url('assets/admin/') ?>css/custom/custom.css" type="text/css" rel="stylesheet"> -->
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-    <link href="<?= base_url('assets/admin/') ?>vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet">
+    <!-- <link href="<?= base_url('assets/admin/') ?>vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet"> -->
     <!-- <link href="<?= base_url('assets/admin/') ?>vendors/flag-icon/css/flag-icon.min.css" type="text/css" rel="stylesheet"> -->
 </head>
 
