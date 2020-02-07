@@ -113,56 +113,95 @@
     </div>
 
 
-    <!--Parallax-->
+    <!--Testimoni-->
     <div class="parallax-container scrollspy" id="testimoni">
         <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/parallax1.png"></div>
         <h2 class="center header text_h2">Testimoni</h2>
-        <!-- <div class="container">
-            <div class="col s12 m12 l6">
-                <div class="card-panel">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card teal lighten-2 center">
+                        <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
+                        <div class="card-content white-text" style="margin-top: -15px;">
+                            <span class="card-title">Lalu Abdurrahman</span>
+                            <p style="margin-top: -10px;">Mahasiswa</p>
+                            <blockquote>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</blockquote>
+                        </div>
 
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="name" type="text">
-                                    <label for="first_name">Nama Lengkap</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="email" type="email">
-                                    <label for="email">Email</label>
-                                </div>
-                            </div>
+                    </div>
+                </div>
 
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="message" class="materialize-textarea"></textarea>
-                                    <label for="message">Pesan</label>
-                                </div>
-                                <div class="row center">
-                                    <div class="input-field col s12 center">
-                                        <button class="btn waves-effect waves-light " type="submit" name="action">Kirim Pesan</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                <div class="col s12 m4">
+                    <div class="card teal lighten-2 center">
+                        <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
+                        <div class="card-content white-text" style="margin-top: -15px;">
+                            <span class="card-title">Iriansyah Ahmad</span>
+                            <p style="margin-top: -10px;">Mahasiswa</p>
+                            <blockquote>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</blockquote>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card teal lighten-2 center">
+                        <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
+                        <div class="card-content white-text" style="margin-top: -15px;">
+                            <span class="card-title">Harry Helvizar</span>
+                            <p style="margin-top: -10px;">Karyawan</p>
+                            <blockquote>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</blockquote>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+
 
     </div>
-
-    <div class="section scrollspy">
+    <!-- <div class="section scrollspy">
         <div class="container">
-            <h2 class="header text_b"> Our Team </h2>
-            <div class="row">
+            <h2 class="header center text_h2"> Hubungi Kami </h2>
+            <div class="container">
+                <div class="col s12 m12 l6">
+                    <div class="card-panel">
 
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="name" type="text">
+                                        <label for="first_name">Nama Lengkap</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="email" type="email">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="message" class="materialize-textarea"></textarea>
+                                        <label for="message">Pesan</label>
+                                    </div>
+                                    <div class="row center">
+                                        <div class="input-field col s12 center">
+                                            <button class="btn waves-effect waves-light " type="submit" name="action">Kirim Pesan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--Footer-->
     <footer id="contact" class="page-footer default_color scrollspy">
