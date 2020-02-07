@@ -55,8 +55,9 @@
                     <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text">
                         <div class="padding-4">
                             <div class="col s12 m12 center">
-                                <h3 class="mt-5"><?= date('H:i:s') ?></h3>
-                                <p class="mt-0"><?= date('l, d-M-Y') ?></p>
+                                <h3 class="mt-5" id="txt"></h3>
+                                <?php date_default_timezone_set('Asia/Jakarta'); ?>
+                                <p class=""><?= date('l, d F Y') ?></p>
                             </div>
 
                         </div>
