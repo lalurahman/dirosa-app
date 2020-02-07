@@ -34,16 +34,20 @@
                     <a href="<?= base_url() ?>" id="logo-container" class="brand-logo"><b>DirosApp</b></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#intro">Tentang Dirosa</a></li>
+                        <li><a href="#testimoni">Testimoni</a></li>
                         <!-- <li><a href="#work">Work</a></li> -->
                         <!-- <li><a href="#team">Hubungi Kami</a></li> -->
                         <li><a href="<?= base_url('admin/auth') ?>">Mulai Belajar</a></li>
                         <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></!-->
                     </ul>
                     <ul id="nav-mobile" class="side-nav">
+
                         <li><a href="#intro">Tentang Dirosa</a></li>
                         <!-- <li><a href="#work">Work</a></li> -->
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#contact">Kontak</a></li>
+                        <!-- <a><a href="#team">Team</a></li>
+                        <li><a href="#contact">Kontak</a></li> -->
+                        <li><a href="<?= base_url('admin/auth') ?>">Mulai Belajar</a></li>
+
                         <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li> -->
                     </ul>
                     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -67,11 +71,16 @@
     </div>
 
     <!--Intro and service-->
-    <div id="intro" class="section scrollspy" style="margin-bottom: 50px;">
+    <div class="section" style="margin-bottom: 50px;">
         <div class="container center">
             <div class="row">
-                <div class="col s12">
-                    <h4 class="center header text_h2">DIROSA <span class="span_h2">(Pendidikan Al-Qur’an Orang Dewasa) </span>adalah sebuah metode belajar Al-Qur’an yang sangat efektif disusun dan didesain khusus untuk orang dewasa agar bisa dengan cepat membaca Al-Qur’an dengan baik, lancar, dan benar <span class="span_h2">sesuai dengan kaidah</span> ilmu tajwid.</h4>
+                <div class="row scrollspy" id="intro">
+                    <div class="col s12 m5">
+                        <img src="<?= base_url('assets/template/img/dirosa.jpg') ?>" alt="" width="250">
+                    </div>
+                    <div class="col s12 m7">
+                        <h5 class="center header text_h2" style="line-height: 2">D I R O S A <br> <span class="span_h2">(Pendidikan Al-Qur’an Orang Dewasa) </span>adalah sebuah metode belajar Al-Qur’an yang sangat efektif disusun dan didesain khusus untuk orang dewasa agar bisa dengan cepat membaca Al-Qur’an dengan baik, lancar, dan benar sesuai dengan kaidah ilmu tajwid.</h5>
+                    </div>
                 </div>
                 <div class="col s12 m4 l4">
                     <div class="center promo promo-example">
@@ -99,16 +108,16 @@
                 </div>
 
             </div>
-            <button class="btn gradient-45deg-light-blue-cyan">mulai belajar</button>
+            <a href="<?= base_url('admin/admincontroller') ?>" class="btn gradient-45deg-light-blue-cyan">mulai belajar</a>
         </div>
     </div>
 
 
     <!--Parallax-->
-    <div class="parallax-container " id="hubungi">
+    <div class="parallax-container scrollspy" id="testimoni">
         <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/parallax1.png"></div>
-        <h2 class="center header text_h2">Hubungi Kami</h2>
-        <div class="container">
+        <h2 class="center header text_h2">Testimoni</h2>
+        <!-- <div class="container">
             <div class="col s12 m12 l6">
                 <div class="card-panel">
 
@@ -142,11 +151,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
+    <div class="section scrollspy">
+        <div class="container">
+            <h2 class="header text_b"> Our Team </h2>
+            <div class="row">
 
+            </div>
+        </div>
+    </div>
 
     <!--Footer-->
     <footer id="contact" class="page-footer default_color scrollspy">
