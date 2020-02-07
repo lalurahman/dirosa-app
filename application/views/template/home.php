@@ -115,25 +115,24 @@
 
     <!--Testimoni-->
     <div class="parallax-container scrollspy" id="testimoni">
-        <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/parallax1.png"></div>
-        <h2 class="center header text_h2">Testimoni</h2>
+        <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/quran2.jpg"></div>
+        <h2 class="center header white-text text_h2">Testimoni</h2>
         <div class="container">
             <div class="row">
                 <div class="col s12 m4">
-                    <div class="card teal lighten-2 center">
+                    <div class="card teal lighten-2 center" style="min-height: 330px;">
                         <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
                         <div class="card-content white-text" style="margin-top: -15px;">
                             <span class="card-title">Lalu Abdurrahman</span>
                             <p style="margin-top: -10px;">Mahasiswa</p>
-                            <blockquote>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</blockquote>
+                            <blockquote>I am a very simple card. I am good at containing small bits of information.</blockquote>
                         </div>
 
                     </div>
                 </div>
 
                 <div class="col s12 m4">
-                    <div class="card teal lighten-2 center">
+                    <div class="card teal lighten-2 center" style="min-height: 330px;">
                         <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
                         <div class="card-content white-text" style="margin-top: -15px;">
                             <span class="card-title">Iriansyah Ahmad</span>
@@ -146,7 +145,7 @@
                 </div>
 
                 <div class="col s12 m4">
-                    <div class="card teal lighten-2 center">
+                    <div class="card teal lighten-2 center" style="min-height: 330px; ">
                         <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
                         <div class="card-content white-text" style="margin-top: -15px;">
                             <span class="card-title">Harry Helvizar</span>
