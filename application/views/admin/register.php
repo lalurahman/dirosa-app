@@ -1,44 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--================================================================================
-	Item Name: Materialize - Material Design Admin Template
-	Version: 4.0
-	Author: PIXINVENT
-	Author URL: https://themeforest.net/user/pixinvent/portfolio
-  ================================================================================ -->
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
-    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title><?= $title; ?></title>
-    <!-- Favicons-->
-    <link rel="icon" href="<?= base_url('assets/admin/') ?>images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <!-- <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png"> -->
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="<?= base_url('assets/admin/') ?>images/favicon/mstile-144x144.png">
-    <!-- For Windows Phone -->
-    <!-- CORE CSS-->
-    <link href="<?= base_url('assets/admin/') ?>css//materialize.css" type="text/css" rel="stylesheet">
-    <link href="<?= base_url('assets/admin/') ?>css//style.css" type="text/css" rel="stylesheet">
-    <!-- Custome CSS-->
-    <!-- <link href="<?= base_url('assets/admin/') ?>css/custom/custom.css" type="text/css" rel="stylesheet"> -->
-    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-    <!-- <link href="<?= base_url('assets/admin/') ?>vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet"> -->
-    <!-- <link href="<?= base_url('assets/admin/') ?>vendors/flag-icon/css/flag-icon.min.css" type="text/css" rel="stylesheet"> -->
-</head>
-
+<?php $this->load->view('admin/inc/header') ?>
 
 <body>
-
-    <!-- End Page Loading -->
-    <!-- //////////////////////////////////////////////////////////////////////////// -->
-    <!-- START MAIN -->
 
     <!-- START WRAPPER -->
     <div class="container">
@@ -50,80 +12,86 @@
                         <div class="card-panel">
                             <h4 class="header2 center">Silahkan Daftar</h4>
                             <div class="row">
-                                <form class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="name" type="text">
-                                            <label for="first_name">Nama Lengkap</label>
-                                        </div>
+                                <form class="col s12" method="post" action="<?= base_url('user/tambahuser') ?>">
+                                    <div class="input-field col s12">
+                                        <input id="nama" name="nama" type="text" value="<?php echo set_value('nama'); ?>">
+                                        <label for="nama">Nama Lengkap</label>
+                                        <?= form_error('nama', '<small class="red-text">', '</small>') ?>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="email" type="email">
-                                            <label for="email">Email</label>
-                                        </div>
+                                    <div class="input-field col s12">
+                                        <input id="email" name="email" type="email" value="<?php echo set_value('email'); ?>">
+                                        <label for="email">Email</label>
+                                        <?= form_error('email', '<small class="red-text">', '</small>') ?>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="password" type="password">
-                                            <label for="password">Password</label>
-                                        </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="password1" name="password1" type="password">
+                                        <label for="password1">Password</label>
+                                        <?= form_error('password1', '<small class="red-text">', '</small>') ?>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="password2" name="password2" type="password">
+                                        <label for="password2">Konfirmasi Password</label>
+                                        <?= form_error('password2', '<small class="red-text">', '</small>') ?>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <select name="jk">
+                                            <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                            <option value="Laki-laki" <?php if (set_value('jk') == "Laki-laki") echo "selected" ?>>Laki-laki</option>
+                                            <option value="Perempuan" <?php if (set_value('jk') == "Perempuan") echo "selected" ?>>Perempuan</option>
+                                        </select>
+                                        <label>Jenis Kelamin</label>
+                                        <?= form_error('jk', '<small class="red-text">', '</small>') ?>
+                                    </div>
+
+                                    <div class="input-field col s12 m7">
+                                        <input id="tempat_lahir" name="tempat_lahir" type="text" value="<?php echo set_value('tempat_lahir'); ?>">
+                                        <label for="tempat_lahir">Tempat Lahir</label>
+                                        <?= form_error('tempat_lahir', '<small class="red-text">', '</small>') ?>
+                                    </div>
+                                    <div class="input col s12 m5">
+                                        <label for="tanggal_lahir">Tanggal Lahir</label>
+                                        <input id="tanggal_lahir" name="tanggal_lahir" type="date" class="" value="<?php echo set_value('tanggal_lahir'); ?>" autocomplete="off">
+                                        <?= form_error('tanggal_lahir', '<small class="red-text left">', '</small>'); ?>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <input id="alamat" name="alamat" type="text" value="<?php echo set_value('alamat'); ?>">
+                                        <label for="alamat">Alamat</label>
+                                        <?= form_error('alamat', '<small class="red-text">', '</small>') ?>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="pekerjaan" name="pekerjaan" type="text" value="<?php echo set_value('pekerjaan'); ?>">
+                                        <label for="pekerjaan">Pekerjaan</label>
+                                        <?= form_error('pekerjaan', '<small class="red-text">', '</small>') ?>
                                     </div>
 
                                     <div class="row">
-                                        <div class="input-field col s12">
-                                            <select name="jk" id="jk">
-                                                <option value="" class="disabled selected">Pilih Jenis Kelamin</option>
-                                                <option value="">Laki Laki</option>
-                                                <option value="">Perempuan</option>
-                                            </select>
-                                            <label for="jk">Jenis Kelamin</label>
+                                        <div class="input-field col s12 ">
+                                            <button class="btn waves-effect waves-light center" type="submit">Daftar
+                                                <!-- <i class="material-icons right">send</i> -->
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="tempat_lahir" type="text">
-                                            <label for="tempat_lahir">Tempat Lahir</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <button class="btn waves-effect waves-light right" type="submit" name="action">Daftar
-                                                    <!-- <i class="material-icons right">send</i> -->
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="center">Sudah punya akun ? <a href="<?= base_url('admin/auth') ?>">Silahkan Login</a> </p>
-
-                                </form>
                             </div>
+                            <p class="center">Sudah punya akun ? <a href="<?= base_url('auth') ?>">Silahkan Login</a> </p>
+
+                            </form>
                         </div>
                     </div>
-
                 </div>
+
             </div>
-            <!-- Form with icon prefixes -->
         </div>
+        <!-- Form with icon prefixes -->
+    </div>
 
     </div>
 
+    <?php $this->load->view('admin/inc/footer') ?>
 
-
-    <!-- jQuery Library -->
-    <script type="text/javascript" src="<?= base_url('assets/admin/') ?>vendors/jquery-3.2.1.min.js"></script>
-    <!--materialize js-->
-    <script type="text/javascript" src="<?= base_url('assets/admin/') ?>js/materialize.min.js"></script>
-    <!--scrollbar-->
-    <script type="text/javascript" src="<?= base_url('assets/admin/') ?>vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-    <script type="text/javascript" src="<?= base_url('assets/admin/') ?>js/plugins.js"></script>
-    <!--custom-script.js - Add your own theme custom JS-->
-    <script type="text/javascript" src="<?= base_url('assets/admin/') ?>js/custom-script.js"></script>
-</body>
-
-</html>
+    <script>
+        $(document).ready(function() {
+            $('.datepicker').datepicker();
+            $('select').formSelect();
+        });
+    </script>

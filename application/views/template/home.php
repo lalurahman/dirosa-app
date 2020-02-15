@@ -37,7 +37,7 @@
                         <li><a href="#testimoni">Testimoni</a></li>
                         <!-- <li><a href="#work">Work</a></li> -->
                         <!-- <li><a href="#team">Hubungi Kami</a></li> -->
-                        <li><a href="<?= base_url('admin/auth') ?>">Mulai Belajar</a></li>
+                        <li><a href="<?= base_url('auth') ?>">Mulai Belajar</a></li>
                         <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></!-->
                     </ul>
                     <ul id="nav-mobile" class="side-nav">
@@ -46,7 +46,7 @@
                         <!-- <li><a href="#work">Work</a></li> -->
                         <!-- <a><a href="#team">Team</a></li>
                         <li><a href="#contact">Kontak</a></li> -->
-                        <li><a href="<?= base_url('admin/auth') ?>">Mulai Belajar</a></li>
+                        <li><a href="<?= base_url('auth') ?>">Mulai Belajar</a></li>
 
                         <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li> -->
                     </ul>
