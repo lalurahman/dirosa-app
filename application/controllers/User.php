@@ -6,7 +6,7 @@ class User extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        is_logged_in();
+
         $this->load->model('user_model');
         if ($this->session->userdata('role_id') == 1) {
             $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
@@ -20,6 +20,7 @@ class User extends CI_Controller
 
     public function index()
     {
+        is_logged_in();
         $data['title'] = 'Data Pengguna - DirosApp';
         $data['user'] = $this->db->get('tb_user')->result();
         $data['content'] = 'admin/user/index';
