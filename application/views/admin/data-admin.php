@@ -5,11 +5,12 @@
 
         <div class="container">
             <div class="row">
+                <?= $this->session->flashdata('message') ?>
+
                 <div class="col s10 m6 l6">
                     <h5 class="breadcrumbs-title"></h5>
                     <ol class="breadcrumbs pt-4">
                         <h5>Data Admin</h5>
-
                     </ol>
                 </div>
                 <div class="col s2 m6 l6">

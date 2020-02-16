@@ -9,7 +9,7 @@
                 <div class="col col s8 m8 l8">
 
                     <a class="btn-flat waves-effect waves-light white-text profile-btn" href="#"><?= $user['nama'] ?></a>
-                    <p class="user-roal">Administrator</p>
+                    <p class="user-roal">User</p>
                 </div>
             </div>
         </li>

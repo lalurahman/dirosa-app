@@ -8,6 +8,13 @@ class User extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('user_model');
+        if ($this->session->userdata('role_id') == 1) {
+            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+        } else if ($this->session->userdata('role_id') == 2) {
+            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+        } else {
+            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        }
     }
 
 
