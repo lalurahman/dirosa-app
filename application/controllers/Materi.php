@@ -7,6 +7,7 @@ class Materi extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model('materi_model');
     }
 
 
@@ -50,9 +51,13 @@ class Materi extends CI_Controller
         # code...
     }
 
-    public function hapusMateri()
+    public function hapusMateri($id_materi)
     {
-        # code...
+        $data['id_materi'] = $id_materi;
+        $this->materi_model->hapus($data);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
+        redirect('materi');
     }
 
     public function pertemuan()
