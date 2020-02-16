@@ -17,7 +17,13 @@ class Admin extends CI_Controller
         if ($this->session->userdata('role_id') == 1) {
             $data['title'] = 'Dashboard - DirosApp';
             $data['content'] = 'admin/dashboard';
-
+            if ($this->session->userdata('role_id') == 1) {
+                $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+            } else if ($this->session->userdata('role_id') == 2) {
+                $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+            } else {
+                $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+            }
             $this->load->view('admin/index', $data);
         } else {
             redirect('auth');

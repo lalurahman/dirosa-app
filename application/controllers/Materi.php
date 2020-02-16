@@ -8,6 +8,13 @@ class Materi extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('materi_model');
+        if ($this->session->userdata('role_id') == 1) {
+            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+        } else if ($this->session->userdata('role_id') == 2) {
+            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+        } else {
+            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        }
     }
 
 
@@ -64,6 +71,15 @@ class Materi extends CI_Controller
     {
         $data['title'] = 'Pertemuan';
         $data['content'] = 'admin/materi';
+
+        if ($this->session->userdata('role_id') == 1) {
+            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+        } else if ($this->session->userdata('role_id') == 2) {
+            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+        } else {
+            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        }
+
         $this->load->view('admin/index', $data);
     }
 }
