@@ -5,6 +5,7 @@
 
         <div class="container">
             <div class="row">
+                <?= $this->session->flashdata('message') ?>
                 <div class="col s10 m6 l6">
                     <h5 class="breadcrumbs-title"></h5>
                     <ol class="breadcrumbs pt-4">
@@ -13,11 +14,7 @@
                     </ol>
                 </div>
                 <div class="col s2 m6 l6">
-                    <a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="<?= base_url('tugas/tambahtugas') ?>">
-                        Tambah Data
-                    </a>
-
-
+                   
                 </div>
             </div>
         </div>
@@ -32,33 +29,33 @@
                     <th>Nama Pengguna</th>
                     <!-- <th>Nama Ustadz</th> -->
                     <th>Judul Materi</th>
-                    <th>Penilaian</th>
-                    <th>Komentar</th>
+                    <!-- <th>Penilaian</th>
+                    <th>Komentar</th> -->
                     <th>Status</th>
                     <th>Tanggal Masuk</th>
 
                     <th>Aksi</th>
                 </tr>
             </thead>
-
             <tbody>
+                <?php $no=1 ?>
+                <?php foreach($tugas as $tugas) : ?>
                 <tr>
-                    <td>1</td>
-                    <td>Lalu Abdurrahman</td>
+                    <td><?= $no++ ?></td>
+                    <td><?= $tugas['nama_user'] ?></td>
                     <!-- <td>Satriadi</td> -->
-                    <td>Pertemuan 1</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>Belum Diperiksa</td>
-                    <td><?= date("Y/m/d H:iP") ?></td>
+                    <td><?= $tugas['pertemuan'] ?></td>
+                    <!-- <td>0</td>
+                    <td>0</td> -->
+                    <td><?= $tugas['status'] ?></td>
+                    <td><?= $tugas['date_created'] ?></td>
                     <td>
-                        <a href="<?= base_url('tugas/hapustugas/'); ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
-                        <a href="<?= base_url('tugas/edittugas/'); ?>" class="waves-effect waves-light btn-small green-text"><i class="material-icons left">edit</i></a>
+                        <a href="<?= base_url('tugas/detailtugas/'.$tugas['id_tugas']); ?>" class="waves-effect waves-light btn-small blue-text" ><i class="material-icons left">remove_red_eye</i></a>
                     </td>
                 </tr>
 
+                <?php endforeach; ?>
             </tbody>
-
             <!-- <?php foreach ($tugas as $tugas) : ?>
                 <tbody>
                     <tr>

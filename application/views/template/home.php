@@ -102,21 +102,19 @@
                 </div>
 
             </div>
-            <a href="<?= base_url('admin/admincontroller') ?>" class="btn gradient-45deg-light-blue-cyan">mulai belajar</a>
+            <a href="<?= base_url('auth') ?>" class="btn gradient-45deg-light-blue-cyan">mulai belajar</a>
         </div>
     </div>
 
 
     <!--Testimoni-->
-    <div class="parallax-container scrollspy" id="testimoni">
+    <!-- <div class="parallax-container scrollspy" id="testimoni">
         <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/quran2.jpg"></div>
         <div class="container">
             <div class="row">
-                <center>
-                    <a href="" class="green text-white">belajar Sekarang!</a>
-                </center>
+                
             </div>
-        </div>
+        </div> -->
 
 
     </div>

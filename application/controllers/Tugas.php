@@ -15,22 +15,19 @@ class Tugas extends CI_Controller
     {
         $data['title'] = 'Data Tugas - DirosApp';
         $data['tugas'] = $this->tugas_model->getTugas();
+        // var_dump($data['tugas']);
+        // die;
         $data['content'] = 'admin/tugas/index';
-        if ($this->session->userdata('role_id') == 1) {
-            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-        } else if ($this->session->userdata('role_id') == 2) {
-            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-        } else {
-            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
-        }
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
         $this->load->view('admin/index', $data);
     }
 
     public function tambahTugas()
     {
         $data = [
-            "id_user" =>  1,
-            "id_materi" =>  1
+            "id_user" =>   $this->input->post('id_user'),
+            "id_materi" => $this->input->post('id_materi'),
+            "status" => "Belum Diperiksa"
         ];
         $upload_image = $_FILES['berkas']['name'];
 
@@ -52,17 +49,40 @@ class Tugas extends CI_Controller
 
         $this->db->insert('tb_tugas', $data);
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil</div>');
-        redirect('materi/pertemuan');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil Dikirim</div>');
+        redirect('materi/pertemuan/1');
     }
 
-    public function editTugas()
+    public function editTugas($id_tugas)
     {
-        # code...
+        $this->form_validation->set_rules('penilaian', 'Penilaian', 'trim|required');
+        $this->form_validation->set_rules('komentar', 'Komentar', 'trim|required');
+        $this->form_validation->set_rules('status', 'Status', 'trim|required');
+
+        if($this->form_validation->run() == false){
+            $data['title'] = 'Data Tugas - DirosApp';
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            $data['detail_tugas'] = $this->tugas_model->detailTugas($id_tugas);
+            $data['content'] = 'admin/tugas/detail_tugas';
+        $this->load->view('admin/index', $data);
+        } else {
+            $this->tugas_model->editProgress();
+            $this->tugas_model->editTugas(($id_tugas));
+            redirect('tugas');
+        }
     }
 
     public function hapusTugas()
     {
         # code...
+    }
+
+    public function detailTugas($id_tugas)
+    {
+        $data['title'] = 'Data Tugas - DirosApp';
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['detail_tugas'] = $this->tugas_model->detailTugas($id_tugas);
+        $data['content'] = 'admin/tugas/detail_tugas';
+        $this->load->view('admin/index', $data);
     }
 }

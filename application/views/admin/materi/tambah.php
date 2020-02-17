@@ -40,17 +40,6 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="file-field input-field col s8 offset-s1">
-                    <div class="btn">
-                        <span>File</span>
-                        <input type="file" name="gambar">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Masukkan Gambar">
-                    </div>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="input-field col s8 offset-s1">

@@ -8,26 +8,17 @@ class User extends CI_Controller
         parent::__construct();
 
         $this->load->model('user_model');
-        if ($this->session->userdata('role_id') == 1) {
-            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-        } else if ($this->session->userdata('role_id') == 2) {
-            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-        } else {
-            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
-        }
+        $this->load->model('materi_model');
+
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
     }
 
 
     public function index()
     {
         is_logged_in();
-        if ($this->session->userdata('role_id') == 1) {
-            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-        } else if ($this->session->userdata('role_id') == 2) {
-            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-        } else {
-            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
-        }
+        
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
 
         $data['title'] = 'Data Pengguna - DirosApp';
         $data['pengguna'] = $this->db->get('tb_user')->result();
@@ -51,13 +42,9 @@ class User extends CI_Controller
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Daftar Pengguna - DirosApp';
-            if ($this->session->userdata('role_id') == 1) {
-                $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-            } else if ($this->session->userdata('role_id') == 2) {
-                $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-            } else {
-                $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
-            }
+            
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            
             $this->load->view('admin/register', $data);
         } else {
             $this->user_model->tambah_user();
@@ -78,15 +65,18 @@ class User extends CI_Controller
     public function profile()
     {
         $data['title'] = 'Profile - DirosApp';
-        $data['content'] = 'admin/profile';
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
 
-        if ($this->session->userdata('role_id') == 1) {
-            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-        } else if ($this->session->userdata('role_id') == 2) {
-            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-        } else {
-            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        
+        
+        if ($this->session->userdata('role_id') == 3) {
+            $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
+            $data['content'] = 'admin/user/profile';
+        }else{
+            $data['content'] = 'admin/profile';
         }
+
+        
 
         $this->load->view('admin/index', $data);
     }

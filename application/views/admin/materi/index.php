@@ -23,31 +23,29 @@
     <!--breadcrumbs end-->
     <!--start container-->
     <div class="container">
-        <table class="bordered striped">
+        <table class="bordered striped responsive-table highlight">
             <thead>
                 <tr>
                     <th>Pertemuan</th>
                     <th>Penjelasan Pertemuan</th>
-                    <th>Gambar</th>
                     <th>Link Video</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
-            <?php foreach ($materi as $materi) : ?>
-                <tbody>
+            <tbody>
+                <?php foreach ($materi as $materi) : ?>
                     <tr>
                         <td><?= $materi->pertemuan ?></td>
                         <td><?= $materi->penjelasan_pertemuan ?></td>
-                        <td> <img src="<?= base_url('assets/admin/images/') . $materi->gambar ?>" alt=""> </td>
                         <td><?= $materi->link_video ?></td>
                         <td>
                             <a href="<?= base_url('materi/hapusmateri/'); ?><?= $materi->id_materi; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
                             <a href="<?= base_url('materi/editmateri/'); ?><?= $materi->id_materi; ?>" class="waves-effect waves-light btn-small green-text"><i class="material-icons left">edit</i></a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
 
                 </tbody>
-            <?php endforeach; ?>
         </table>
     </div>
 </section>

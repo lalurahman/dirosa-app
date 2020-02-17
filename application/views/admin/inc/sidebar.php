@@ -72,9 +72,15 @@
                         <span class="nav-text">Profile</span>
                     </a>
                 </li>
-                <?php if ($this->session->userdata['role_id'] == 1 || $this->session->userdata['role_id'] == 3) : ?>
+                <?php if ($this->session->userdata['role_id'] == 3) : ?>
                     <li class="bold">
-                        <a href="<?= base_url('materi/pertemuan') ?>" class="waves-effect waves-cyan">
+                        <a href="<?= base_url('user/tugas') ?>" class="waves-effect waves-cyan">
+                            <i class="material-icons">library_books</i>
+                            <span class="nav-text">Tugas</span>
+                        </a>
+                    </li>
+                    <li class="bold">
+                        <a href="<?= base_url('materi/pertemuan/'.$progress_belajar['id_materi']) ?>" class="waves-effect waves-cyan">
                             <i class="material-icons">library_books</i>
                             <span class="nav-text">Materi</span>
                         </a>
@@ -83,7 +89,7 @@
                 <?php endif; ?>
 
 
-                <?php if ($this->session->userdata['role_id'] == 2 || $this->session->userdata['role_id'] == 1) :   ?>
+                <?php if ($this->session->userdata['role_id'] == 2 ) :   ?>
 
                     <li class="bold">
                         <a href="<?= base_url('tugas') ?>" class="waves-effect waves-cyan">

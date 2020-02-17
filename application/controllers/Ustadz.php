@@ -16,13 +16,9 @@ class Ustadz extends CI_Controller
 
         $data['content'] = 'admin/ustadz/index';
 
-        if ($this->session->userdata('role_id') == 1) {
-            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-        } else if ($this->session->userdata('role_id') == 2) {
-            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-        } else {
-            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
-        }
+       
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+
         $this->load->view('admin/index', $data);
     }
 
@@ -39,13 +35,9 @@ class Ustadz extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Tambah Data Ustadz - DirosApp';
             $data['content'] = 'admin/ustadz/tambah';
-            if ($this->session->userdata('role_id') == 1) {
-                $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
-            } else if ($this->session->userdata('role_id') == 2) {
-                $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
-            } else {
-                $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
-            }
+            
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+
             $this->load->view('admin/index', $data);
         } else {
             $data = [
