@@ -29,7 +29,7 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama User</th>
+                    <th>Nama Pengguna</th>
                     <!-- <th>Nama Ustadz</th> -->
                     <th>Judul Materi</th>
                     <th>Penilaian</th>
