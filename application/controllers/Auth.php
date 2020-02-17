@@ -79,13 +79,13 @@ class Auth extends CI_Controller
             }
         } else if ($ustadz) {
             // usernya aktif
-            if ($user['is_active'] == 1) {
+            if ($ustadz['is_active'] == 1) {
                 // cek password
-                if (password_verify($password, $user['password'])) {
+                if (password_verify($password, $ustadz['password'])) {
                     // jika password benar
                     $data = [
-                        'email' => $user['email'],
-                        'role_id' => $user['user_role']
+                        'email' => $ustadz['email'],
+                        'role_id' => $ustadz['user_role']
                     ];
 
                     // menyimpan data di session

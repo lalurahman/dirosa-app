@@ -72,7 +72,7 @@
                 <?php endif; ?>
 
 
-                <?php if ($this->session->userdata['role_id'] == 1 || $this->session->userdata['role_id'] == 2) :   ?>
+                <?php if ($this->session->userdata['role_id'] == 2 || $this->session->userdata['role_id'] == 1) :   ?>
 
                     <li class="bold">
                         <a href="<?= base_url('tugas') ?>" class="waves-effect waves-cyan">

@@ -23,6 +23,16 @@ class Materi extends CI_Controller
         $data['title'] = 'Data Materi - DirosApp';
         $data['materi'] = $this->db->get('tb_materi')->result();
         $data['content'] = 'admin/materi/index';
+        if ($this->session->userdata('role_id') == 1) {
+            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+        } else if ($this->session->userdata('role_id') == 2) {
+            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+        } else {
+            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        }
+
+
+
         $this->load->view('admin/index', $data);
     }
 
@@ -71,6 +81,7 @@ class Materi extends CI_Controller
     {
         $data['title'] = 'Pertemuan';
         $data['content'] = 'admin/materi';
+        $data['materi'] = $this->db->get('tb_materi')->result();
 
         if ($this->session->userdata('role_id') == 1) {
             $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();

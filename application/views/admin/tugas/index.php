@@ -44,8 +44,8 @@
                 <tbody>
                     <tr>
                         <td><?= $tugas->link_tugas ?></td>
-                        <td><?= $tugas->nama_user ?></td>
-                        <td><?= $tugas->nama_ustadz ?></td>
+                        <td><?= $tugas->id_user ?></td>
+                        <td><?= $tugas->id_ustadz ?></td>
                         <td><?= $tugas->pertemuan ?></td>
                         <td><?= $tugas->penilaian ?></td>
                         <td><?= $tugas->komentar ?></td>

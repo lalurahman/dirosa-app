@@ -17,14 +17,14 @@
 
                  <ul class="right hide-on-med-and-down">
 
-
+                     <!-- 
                      <li>
                          <a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown">
                              <i class="material-icons">notifications_none
                                  <small class="notification-badge pink accent-2">5</small>
                              </i>
                          </a>
-                     </li>
+                     </li> -->
                      <li style="margin-right: 20px;">
                          <a href="javascript:void(0);" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
                              <span class="avatar-status avatar-online">
@@ -74,7 +74,7 @@
                  <!-- profile-dropdown -->
                  <ul id="profile-dropdown" class="dropdown-content">
                      <li>
-                         <a href="#" class="grey-text text-darken-1">
+                         <a href="<?= base_url('user/profile') ?>" class="grey-text text-darken-1">
                              <i class="material-icons">face</i> Profile</a>
                      </li>
 

@@ -13,17 +13,11 @@
                     </a>
                     <span class="card-title activator grey-text text-darken-4 mt-2"><?= $user['nama'] ?></span>
                     <p>
-                        <i class="material-icons">perm_identity</i> Project Manager</p>
+                        <!-- <i class="material-icons">perm_identity</i> Project Manager</p>
                     <p>
-                        <i class="material-icons">perm_phone_msg</i> +1 (612) 222 8989</p>
-                    <p>
-                        <i class="material-icons">email</i> yourmail@domain.com</p>
-                    <p>
-                        <i class="material-icons">email</i> yourmail@domain.com</p>
-                    <p>
-                        <i class="material-icons">email</i> yourmail@domain.com</p>
-                    <p>
-                        <i class="material-icons">email</i> yourmail@domain.com</p>
+                        <i class="material-icons">perm_phone_msg</i> +1 (612) 222 8989</p> -->
+                        <p><i class="material-icons">email</i> <?= $user['email'] ?> </p>
+
 
                 </div>
                 <!-- <div class="card-reveal">

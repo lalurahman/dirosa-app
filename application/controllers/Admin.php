@@ -41,6 +41,13 @@ class Admin extends CI_Controller
         $data['title'] = 'Data Admin - DirosApp';
         $data['content'] = 'admin/data-admin';
         $data['admin'] = $this->db->get('tb_admin')->result();
+        if ($this->session->userdata('role_id') == 1) {
+            $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+        } else if ($this->session->userdata('role_id') == 2) {
+            $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+        } else {
+            $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        }
         $this->load->view('admin/index', $data);
     }
 
@@ -57,6 +64,13 @@ class Admin extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Tambah Data Admin - DirosApp';
             $data['content'] = 'admin/tambah_data_admin';
+            if ($this->session->userdata('role_id') == 1) {
+                $data['user'] = $this->db->get_where('tb_admin', ['email' => $this->session->userdata('email')])->row_array();
+            } else if ($this->session->userdata('role_id') == 2) {
+                $data['user'] = $this->db->get_where('tb_ustadz', ['email' => $this->session->userdata('email')])->row_array();
+            } else {
+                $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+            }
             $this->load->view('admin/index', $data);
         } else {
             $data = [
