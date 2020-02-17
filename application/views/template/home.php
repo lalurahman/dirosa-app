@@ -34,18 +34,12 @@
                     <a href="<?= base_url() ?>" id="logo-container" class="brand-logo"><b>DirosApp</b></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#intro">Tentang Dirosa</a></li>
-                        <li><a href="#testimoni">Testimoni</a></li>
-                        <!-- <li><a href="#work">Work</a></li> -->
-                        <!-- <li><a href="#team">Hubungi Kami</a></li> -->
                         <li><a href="<?= base_url('auth') ?>">Mulai Belajar</a></li>
                         <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></!-->
                     </ul>
                     <ul id="nav-mobile" class="side-nav">
 
                         <li><a href="#intro">Tentang Dirosa</a></li>
-                        <!-- <li><a href="#work">Work</a></li> -->
-                        <!-- <a><a href="#team">Team</a></li>
-                        <li><a href="#contact">Kontak</a></li> -->
                         <li><a href="<?= base_url('auth') ?>">Mulai Belajar</a></li>
 
                         <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li> -->
@@ -116,46 +110,11 @@
     <!--Testimoni-->
     <div class="parallax-container scrollspy" id="testimoni">
         <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/quran2.jpg"></div>
-        <h2 class="center header white-text text_h2">Testimoni</h2>
         <div class="container">
             <div class="row">
-                <div class="col s12 m4">
-                    <div class="card teal lighten-2 center" style="min-height: 330px;">
-                        <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
-                        <div class="card-content white-text" style="margin-top: -15px;">
-                            <span class="card-title">Lalu Abdurrahman</span>
-                            <p style="margin-top: -10px;">Mahasiswa</p>
-                            <blockquote>I am a very simple card. I am good at containing small bits of information.</blockquote>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="card teal lighten-2 center" style="min-height: 330px;">
-                        <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
-                        <div class="card-content white-text" style="margin-top: -15px;">
-                            <span class="card-title">Iriansyah Ahmad</span>
-                            <p style="margin-top: -10px;">Mahasiswa</p>
-                            <blockquote>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</blockquote>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="card teal lighten-2 center" style="min-height: 330px; ">
-                        <img style="margin-top: 10px;" class="circle responsive-img" src="<?= base_url('assets/template/') ?>img/lalu.jpg" width="80">
-                        <div class="card-content white-text" style="margin-top: -15px;">
-                            <span class="card-title">Harry Helvizar</span>
-                            <p style="margin-top: -10px;">Karyawan</p>
-                            <blockquote>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</blockquote>
-                        </div>
-
-                    </div>
-                </div>
+                <center>
+                    <a href="" class="green text-white">belajar Sekarang!</a>
+                </center>
             </div>
         </div>
 
