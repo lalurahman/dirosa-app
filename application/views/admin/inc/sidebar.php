@@ -9,7 +9,18 @@
                 <div class="col col s8 m8 l8">
 
                     <a class="btn-flat waves-effect waves-light white-text profile-btn" href="#"><?= $user['nama'] ?></a>
-                    <p class="user-roal">User</p>
+                    <?php if ($this->session->userdata['role_id'] == 1) : ?>
+                        <p class="user-roal">Admin</p>
+                    <?php endif; ?>
+
+                    <?php if ($this->session->userdata['role_id'] == 2) : ?>
+                        <p class="user-roal">Ustadz</p>
+                    <?php endif; ?>
+
+                    <?php if ($this->session->userdata['role_id'] == 3) : ?>
+                        <p class="user-roal">Pengguna</p>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </li>
