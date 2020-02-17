@@ -14,9 +14,8 @@
                                 <p>Ustadz</p>
                             </div>
                             <div class="col s5 m5 right-align">
-                                <h5 class="mb-0">690</h5>
-                                <p class="no-margin">New</p>
-                                <p>6,00,00</p>
+                                <h5 class="mb-0"><?php echo $jumlah_ustadz ?></h5>
+                                <p class="no-margin">Orang</p>
                             </div>
                         </div>
                     </div>
@@ -29,9 +28,8 @@
                                 <p>Pengguna</p>
                             </div>
                             <div class="col s5 m5 right-align">
-                                <h5 class="mb-0">1885</h5>
-                                <p class="no-margin">New</p>
-                                <p>1,12,900</p>
+                                <h5 class="mb-0"><?php echo $jumlah_user ?></h5>
+                                <p class="no-margin">Orang</p>
                             </div>
                         </div>
                     </div>
@@ -44,9 +42,8 @@
                                 <p>Admin</p>
                             </div>
                             <div class="col s5 m5 right-align">
-                                <h5 class="mb-0">80%</h5>
-                                <p class="no-margin">Growth</p>
-                                <p>3,42,230</p>
+                                <h5 class="mb-0"><?php echo $jumlah_admin ?></h5>
+                                <p class="no-margin">Orang</p>
                             </div>
                         </div>
                     </div>

@@ -24,6 +24,11 @@ class Admin extends CI_Controller
             } else {
                 $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
             }
+
+            $data['jumlah_admin'] = $this->db->get('tb_admin')->num_rows();
+            $data['jumlah_user'] = $this->db->get('tb_user')->num_rows();
+            $data['jumlah_ustadz'] = $this->db->get('tb_ustadz')->num_rows();
+
             $this->load->view('admin/index', $data);
         } else {
             redirect('auth');
@@ -32,6 +37,7 @@ class Admin extends CI_Controller
 
     public function dataAdmin()
     {
+
         $data['title'] = 'Data Admin - DirosApp';
         $data['content'] = 'admin/data-admin';
         $data['admin'] = $this->db->get('tb_admin')->result();
