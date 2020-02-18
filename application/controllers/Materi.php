@@ -19,12 +19,9 @@ class Materi extends CI_Controller
         $data['title'] = 'Data Materi - DirosApp';
         $data['materi'] = $this->db->get('tb_materi')->result();
         $data['content'] = 'admin/materi/index';
+        $data['jumlah_materi'] = $this->materi_model ->jumlah_materi();
         
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-
-
-
-
         $this->load->view('admin/index', $data);
     }
 
@@ -38,19 +35,11 @@ class Materi extends CI_Controller
             $data['title'] = 'Tambah Materi - DirosApp';
             $data['materi'] = $this->db->get('tb_materi')->result();
             $data['content'] = 'admin/materi/tambah';
-
             $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);
         } else {
-            $data = [
-                'pertemuan' => htmlspecialchars($this->input->post('pertemuan')),
-                'penjelasan_pertemuan' => htmlspecialchars($this->input->post('penjelasan_pertemuan')),
-                'link_video' => htmlspecialchars($this->input->post('link_video'))
-
-            ];
-
-            $this->db->insert('tb_materi', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah</div>');
+            $this->materi_model->tambah_materi();
             redirect('materi');
         }
     }
@@ -60,25 +49,17 @@ class Materi extends CI_Controller
         # code...
     }
 
-    public function hapusMateri($id_materi)
-    {
-        $data['id_materi'] = $id_materi;
-        $this->materi_model->hapus($data);
-
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
-        redirect('materi');
-    }
 
     public function pertemuan($i)
     {
         if ($this->session->userdata('role_id')){
         $data['title'] = 'Pertemuan';
         $data['materi'] = $this->materi_model->get_materi($i);
-        $data['content'] = 'admin/pertemuan/dirosa'.$i;
+        $data['content'] = 'admin/pertemuan/dirosa';
 
         
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-
+        $data['cek_tugas'] = $this->materi_model->cek_tugas($data['user']['id_user'], $i);
 
         $data['progress_belajar_aktiv'] = $i;
         $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);

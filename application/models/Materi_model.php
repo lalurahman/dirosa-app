@@ -18,4 +18,30 @@ class Materi_model extends CI_Model
         $this->db->where('id_materi', $id);
         return $this->db->get('tb_materi')->result();
     }
+
+    public function tambah_materi()
+    {
+        $data = [
+            'pertemuan' => htmlspecialchars($this->input->post('pertemuan')),
+            'penjelasan_pertemuan' => htmlspecialchars($this->input->post('penjelasan_pertemuan')),
+            'link_video' => htmlspecialchars($this->input->post('link_video'))
+
+        ];
+        $this->db->insert('tb_materi', $data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah</div>');
+    }
+
+    public function jumlah_materi()
+    {
+        $this->db->from('tb_materi');
+        return $this->db->count_all_results();
+    }
+
+    
+    public function cek_tugas($id_user, $id_materi){
+        $this->db->where('id_user', $id_user);
+        $this->db->where('id_materi', $id_materi);
+        return $this->db->get('tb_tugas')->row_array();
+    }
+
 }

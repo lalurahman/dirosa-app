@@ -1,6 +1,7 @@
 <?php
 class User_model extends CI_Model
 {
+
     public function tambah_user()
     {
 
@@ -15,12 +16,25 @@ class User_model extends CI_Model
             'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
             'user_role' => 3,
             'is_active' => 1,
-            'foto' => 'default.jpg'
+            'foto' => 'default.png'
             // 'date_created' => time("Y/m/d H:iP")
         ];
-
         $this->db->insert('tb_user', $data);
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been registered!</div>');
+        
+        
+        
+        
+        $this->db->order_by('id_user', 'DESC');
+        $id_user = $this->db->get('tb_user')->row_array();
+
+
+        $data2 = [
+            'id_user' => $id_user['id_user'],
+            'id_materi' => 1
+        ];
+        $this->db->insert('tb_progress_belajar', $data2);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! anda berhasil mendaftar :)</div>');
         redirect('auth');
     }
 }
