@@ -10,7 +10,7 @@
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
     <title><?= $title; ?></title>
     <!-- Favicons-->
-    <link rel="icon" href="<?= base_url('assets/admin/') ?>images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="<?= base_url('assets/admin/') ?>images/logo/icon.png" sizes="32x32">
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
     <!-- For iPhone -->

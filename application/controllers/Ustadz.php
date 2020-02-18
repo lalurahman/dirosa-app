@@ -7,6 +7,7 @@ class Ustadz extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model('ustadz_model');
     }
 
     public function index()
@@ -35,24 +36,11 @@ class Ustadz extends CI_Controller
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Tambah Data Ustadz - DirosApp';
             $data['content'] = 'admin/ustadz/tambah';
-            
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);
         } else {
-            $data = [
-                'nama' => htmlspecialchars($this->input->post('nama')),
-                'email' => htmlspecialchars($this->input->post('email')),
-                'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-                'user_role' => 2,
-                'is_active' => 1,
-                'foto' => 'default.jpg',
-                'date_created' => time("Y/m/d H:iP")
-
-            ];
-
-            $this->db->insert('tb_ustadz', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
+            $this->ustadz_model->tambah_ustadz();
             redirect('ustadz');
         }
     }
@@ -62,8 +50,12 @@ class Ustadz extends CI_Controller
         # code...
     }
 
-    public function hapusUstadz()
+    public function hapusUstadz($id_ustadz)
     {
-        # code...
+        $data['id_ustadz'] = $id_ustadz;
+        $this->ustadz_model->hapus($data);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
+        redirect('ustadz');
     }
 }

@@ -13,31 +13,24 @@ class Admin extends CI_Controller
 
     public function index()
     {
-        // cek jika ada session 
-        if ($this->session->userdata('role_id') == 1) {
-            $data['title'] = 'Dashboard - DirosApp';
-            $data['content'] = 'admin/dashboard';
-
-            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-
-            $data['jumlah_admin'] = $this->db->get('tb_admin')->num_rows();
-            $data['jumlah_user'] = $this->db->get('tb_user')->num_rows();
-            $data['jumlah_ustadz'] = $this->db->get('tb_ustadz')->num_rows();
-
-            $this->load->view('admin/index', $data);
-        } else {
-            redirect('auth');
-        }
+        $data['title'] = 'Dashboard - DirosApp';
+        $data['content'] = 'admin/dashboard';
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        login_admin($data['user']['user_role']);
+        $data['jumlah_admin'] = $this->db->get('tb_admin')->num_rows();
+        $data['jumlah_user'] = $this->db->get('tb_user')->num_rows();
+        $data['jumlah_ustadz'] = $this->db->get('tb_ustadz')->num_rows();
+        $this->load->view('admin/index', $data);
     }
 
     public function dataAdmin()
     {
-
-        $data['title'] = 'Data Admin - DirosApp';
-        $data['content'] = 'admin/data-admin';
-        $data['admin'] = $this->db->get('tb_admin')->result();
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-        $this->load->view('admin/index', $data);
+            $data['title'] = 'Data Admin - DirosApp';
+            $data['content'] = 'admin/data-admin';
+            $data['admin'] = $this->db->get('tb_admin')->result();
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            login_admin($data['user']['user_role']);
+            $this->load->view('admin/index', $data);
     }
 
     public function tambahAdmin()
@@ -54,28 +47,16 @@ class Admin extends CI_Controller
             $data['title'] = 'Tambah Data Admin - DirosApp';
             $data['content'] = 'admin/tambah_data_admin';
             $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);
         } else {
-            $data = [
-                'nama' => htmlspecialchars($this->input->post('nama')),
-                'email' => htmlspecialchars($this->input->post('email')),
-                'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-                'user_role' => 1,
-                'is_active' => 1,
-                'foto' => 'default.jpg',
-                'date_created' => time("Y/m/d H:iP")
-
-            ];
-
-            $this->db->insert('tb_admin', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
+            $this->admin_model->tambah_admin();
             redirect('admin/dataadmin');
         }
     }
 
     public function editAdmin()
     {
-        # code...
 
     }
 
@@ -83,8 +64,8 @@ class Admin extends CI_Controller
     {
         $data['id_admin'] = $id_admin;
         $this->admin_model->hapus($data);
-
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
         redirect('admin/dataadmin');
     }
+    
 }

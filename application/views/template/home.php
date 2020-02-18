@@ -35,14 +35,10 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#intro">Tentang Dirosa</a></li>
                         <li><a href="<?= base_url('auth') ?>">Mulai Belajar</a></li>
-                        <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></!-->
                     </ul>
                     <ul id="nav-mobile" class="side-nav">
-
                         <li><a href="#intro">Tentang Dirosa</a></li>
                         <li><a href="<?= base_url('auth') ?>">Mulai Belajar</a></li>
-
-                        <!-- <li><a href="https://github.com/joashp/material-design-template" target="_blank">Download</a></li> -->
                     </ul>
                     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                 </div>
@@ -81,7 +77,7 @@
                         <!-- <i class="mdi-image-flash-on"></i> -->
                         <i class="material-icons">done</i>
                         <h5 class="promo-caption">Waktu Belajar Yang Cepat</h5>
-                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                        <p class="light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
@@ -89,7 +85,7 @@
                         <!-- <i class=""></i>mdi-social-group -->
                         <i class="material-icons">done</i>
                         <h5 class="promo-caption">20 Kali Pertemuan</h5>
-                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
@@ -97,7 +93,7 @@
                         <!-- <i class="mdi-hardware-desktop-windows"></i> -->
                         <i class="material-icons">done</i>
                         <h5 class="promo-caption">Pertemuan Sekali Sepekan</h5>
-                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                        <p class="light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                     </div>
                 </div>
 
@@ -106,60 +102,7 @@
         </div>
     </div>
 
-
-    <!--Testimoni-->
-    <!-- <div class="parallax-container scrollspy" id="testimoni">
-        <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/quran2.jpg"></div>
-        <div class="container">
-            <div class="row">
-                
-            </div>
-        </div> -->
-
-
     </div>
-    <!-- <div class="section scrollspy">
-        <div class="container">
-            <h2 class="header center text_h2"> Hubungi Kami </h2>
-            <div class="container">
-                <div class="col s12 m12 l6">
-                    <div class="card-panel">
-
-                        <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="name" type="text">
-                                        <label for="first_name">Nama Lengkap</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="email" type="email">
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <textarea id="message" class="materialize-textarea"></textarea>
-                                        <label for="message">Pesan</label>
-                                    </div>
-                                    <div class="row center">
-                                        <div class="input-field col s12 center">
-                                            <button class="btn waves-effect waves-light " type="submit" name="action">Kirim Pesan</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!--Footer-->
     <footer id="contact" class="page-footer default_color scrollspy">
 
         <div class="footer-copyright default_color">

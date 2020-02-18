@@ -48,11 +48,11 @@ class Auth extends CI_Controller
                     $this->session->set_userdata($data);
                     redirect('user/profile');
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah!</div>');
                     redirect('auth');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">This email has not activated!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email anda belum diaktivasi!</div>');
                 redirect('auth');
             }
         } else if ($admin) {
@@ -70,11 +70,11 @@ class Auth extends CI_Controller
                     $this->session->set_userdata($data);
                     redirect('admin');
                 } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong password!</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah!</div>');
                     redirect('auth');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">This email has not activated!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email anda belum diaktivasi!</div>');
                 redirect('auth');
             }
         } else if ($ustadz) {
@@ -96,12 +96,12 @@ class Auth extends CI_Controller
                     redirect('auth');
                 }
             } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">This email has not activated!</div>');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email anda belum diaktivasi!</div>');
                 redirect('auth');
             }
         } else {
 
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email is not registered!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email tidak terdaftar!</div>');
             redirect('auth');
         }
     }
@@ -112,7 +112,7 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil Logout!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil Keluar!</div>');
         redirect('auth');
     }
 

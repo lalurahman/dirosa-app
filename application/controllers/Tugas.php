@@ -15,8 +15,6 @@ class Tugas extends CI_Controller
     {
         $data['title'] = 'Data Tugas - DirosApp';
         $data['tugas'] = $this->tugas_model->getTugas();
-        // var_dump($data['tugas']);
-        // die;
         $data['content'] = 'admin/tugas/index';
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
         $this->load->view('admin/index', $data);

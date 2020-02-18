@@ -13,9 +13,11 @@
                     </ol>
                 </div>
                 <div class="col s2 m6 l6">
+                    <?php if($jumlah_materi < 21): ?>
                     <a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="<?= base_url('materi/tambahmateri') ?>">
                         Tambah Data
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -39,7 +41,6 @@
                         <td><?= $materi->penjelasan_pertemuan ?></td>
                         <td><?= $materi->link_video ?></td>
                         <td>
-                            <a href="<?= base_url('materi/hapusmateri/'); ?><?= $materi->id_materi; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
                             <a href="<?= base_url('materi/editmateri/'); ?><?= $materi->id_materi; ?>" class="waves-effect waves-light btn-small green-text"><i class="material-icons left">edit</i></a>
                         </td>
                     </tr>

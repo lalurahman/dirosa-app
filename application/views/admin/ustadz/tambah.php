@@ -27,16 +27,16 @@
         <form class="col s12" method="post" action="<?= base_url('ustadz/tambahustadz') ?>">
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <input id="name" name="nama" type="text">
-                    <label for="first_name">Nama Lengkap</label>
-                    <?= form_error('nama', '<small class="text-danger pl-3">', '</small>') ?>
+                    <input id="nama" name="nama" value="<?= set_value('nama'); ?>" type="text">
+                    <label for="nama">Nama Lengkap</label>
+                    <?= form_error('nama', '<small class="red-text">', '</small>') ?>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <input id="email" name="email" type="email">
+                    <input id="email" name="email" value="<?= set_value('email'); ?>" type="email">
                     <label for="email">Email</label>
-                    <?= form_error('email', '<small class="text-danger pl-3">', '</small>') ?>
+                    <?= form_error('email', '<small class="red-text">', '</small>') ?>
 
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="input-field col s8 offset-s1">
                     <input id="password1" name="password1" type="password">
                     <label for="password1">Password</label>
-                    <?= form_error('password1', '<small class="text-danger pl-3">', '</small>') ?>
+                    <?= form_error('password1', '<small class="red-text">', '</small>') ?>
 
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <div class="input-field col s8 offset-s1">
                     <input id="password2" name="password2" type="password">
                     <label for="password2">Konfirmasi Password</label>
-                    <?= form_error('password2', '<small class="text-danger pl-3">', '</small>') ?>
+                    <?= form_error('password2', '<small class="red-text">', '</small>') ?>
 
                 </div>
             </div>

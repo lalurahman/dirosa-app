@@ -8,7 +8,6 @@
                      <li>
                          <h1 class="logo-wrapper">
                              <a href="#" class="brand-logo darken-1">
-                                 <!-- <img src="<?= base_url('assets/admin/') ?>images/logo/materialize-logo.png" alt="materialize logo"> -->
                                  <span class="logo-text hide-on-med-and-down">DirosApp</span>
                              </a>
                          </h1>
@@ -17,18 +16,10 @@
 
                  <ul class="right hide-on-med-and-down">
 
-                     <!-- 
-                     <li>
-                         <a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown">
-                             <i class="material-icons">notifications_none
-                                 <small class="notification-badge pink accent-2">5</small>
-                             </i>
-                         </a>
-                     </li> -->
                      <li style="margin-right: 20px;">
                          <a href="javascript:void(0);" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
                              <span class="avatar-status avatar-online">
-                                 <img src="<?= base_url('assets/admin/') ?>images/avatar/avatar-7.png" alt="avatar">
+                                 <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="avatar">
                                  <i></i>
                              </span>
                          </a>

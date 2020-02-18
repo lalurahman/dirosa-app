@@ -9,6 +9,7 @@ class User extends CI_Controller
 
         $this->load->model('user_model');
         $this->load->model('materi_model');
+        $this->load->model('tugas_model');
 
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
     }
@@ -66,18 +67,35 @@ class User extends CI_Controller
     {
         $data['title'] = 'Profile - DirosApp';
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-
-        
-        
         if ($this->session->userdata('role_id') == 3) {
             $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
             $data['content'] = 'admin/user/profile';
         }else{
             $data['content'] = 'admin/profile';
         }
+        $this->load->view('admin/index', $data);
+    }
 
-        
+    public function tugas()
+    {
+        $data['title'] = 'Progress Belajar - DirosApp';
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['tugas_user'] = $this->tugas_model->getTugasUser();
+        if ($this->session->userdata('role_id') == 3) {
+            $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
+            $data['content'] = 'admin/user/tugas';
+        }else{
+            $data['content'] = 'admin/profile';
+        }
+        $this->load->view('admin/index', $data);
+    }
 
+    public function detailTugasUser($id_tugas)
+    {
+        $data['title'] = 'Data Tugas - DirosApp';
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['detail_tugas_user'] = $this->tugas_model->detailTugasUser($id_tugas);
+        $data['content'] = 'admin/user/detail_tugas_user';
         $this->load->view('admin/index', $data);
     }
 }
