@@ -11,15 +11,15 @@ class User extends CI_Controller
         $this->load->model('materi_model');
         $this->load->model('tugas_model');
 
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
     }
 
 
     public function index()
     {
         is_logged_in();
-        
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
 
         $data['title'] = 'Data Pengguna - DirosApp';
         $data['pengguna'] = $this->db->get('tb_user')->result();
@@ -43,9 +43,9 @@ class User extends CI_Controller
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Daftar Pengguna - DirosApp';
-            
-            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-            
+
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+
             $this->load->view('admin/register', $data);
         } else {
             $this->user_model->tambah_user();
@@ -66,11 +66,11 @@ class User extends CI_Controller
     public function profile()
     {
         $data['title'] = 'Profile - DirosApp';
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
         if ($this->session->userdata('role_id') == 3) {
             $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
             $data['content'] = 'admin/user/profile';
-        }else{
+        } else {
             $data['content'] = 'admin/profile';
         }
         $this->load->view('admin/index', $data);
@@ -79,12 +79,12 @@ class User extends CI_Controller
     public function tugas()
     {
         $data['title'] = 'Progress Belajar - DirosApp';
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
         $data['tugas_user'] = $this->tugas_model->getTugasUser();
         if ($this->session->userdata('role_id') == 3) {
             $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
             $data['content'] = 'admin/user/tugas';
-        }else{
+        } else {
             $data['content'] = 'admin/profile';
         }
         $this->load->view('admin/index', $data);
@@ -93,9 +93,15 @@ class User extends CI_Controller
     public function detailTugasUser($id_tugas)
     {
         $data['title'] = 'Data Tugas - DirosApp';
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
         $data['detail_tugas_user'] = $this->tugas_model->detailTugasUser($id_tugas);
-        $data['content'] = 'admin/user/detail_tugas_user';
+        if ($this->session->userdata('role_id') == 3) {
+            $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
+            $data['content'] = 'admin/user/detail_tugas_user';
+        } else {
+            $data['content'] = 'admin/profile';
+        }
         $this->load->view('admin/index', $data);
     }
 }
