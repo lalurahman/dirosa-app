@@ -8,9 +8,8 @@ class Materi extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('materi_model');
-        
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
 
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
     }
 
 
@@ -19,9 +18,9 @@ class Materi extends CI_Controller
         $data['title'] = 'Data Materi - DirosApp';
         $data['materi'] = $this->db->get('tb_materi')->result();
         $data['content'] = 'admin/materi/index';
-        $data['jumlah_materi'] = $this->materi_model ->jumlah_materi();
-        
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['jumlah_materi'] = $this->materi_model->jumlah_materi();
+
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
         $this->load->view('admin/index', $data);
     }
 
@@ -35,7 +34,7 @@ class Materi extends CI_Controller
             $data['title'] = 'Tambah Materi - DirosApp';
             $data['materi'] = $this->db->get('tb_materi')->result();
             $data['content'] = 'admin/materi/tambah';
-            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
             login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);
         } else {
@@ -52,20 +51,21 @@ class Materi extends CI_Controller
 
     public function pertemuan($i)
     {
-        if ($this->session->userdata('role_id')){
-        $data['title'] = 'Pertemuan';
-        $data['materi'] = $this->materi_model->get_materi($i);
-        $data['content'] = 'admin/pertemuan/dirosa';
+        if ($this->session->userdata('role_id')) {
+            $data['title'] = 'Pertemuan';
+            $data['materi'] = $this->materi_model->get_materi($i);
+            $data['content'] = 'admin/pertemuan/dirosa';
 
-        
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
-        $data['cek_tugas'] = $this->materi_model->cek_tugas($data['user']['id_user'], $i);
 
-        $data['progress_belajar_aktiv'] = $i;
-        $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+            $data['cek_tugas'] = $this->materi_model->cek_tugas($data['user']['id_user'], $i);
+            // var_dump($data['cek_tugas']);
+            // die;
+            $data['progress_belajar_aktiv'] = $i;
+            $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
 
-        $this->load->view('admin/index', $data);
-        }else{
+            $this->load->view('admin/index', $data);
+        } else {
             redirect('auth');
         }
     }

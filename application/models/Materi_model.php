@@ -8,13 +8,15 @@ class Materi_model extends CI_Model
         $this->db->delete('tb_materi', $data);
     }
 
-    public function get_progress_belajar($id_user){
+    public function get_progress_belajar($id_user)
+    {
         $this->db->select('id_materi');
         $this->db->where('id_user', $id_user);
         return $this->db->get('tb_progress_belajar')->row_array();
     }
 
-    public function get_materi($id){
+    public function get_materi($id)
+    {
         $this->db->where('id_materi', $id);
         return $this->db->get('tb_materi')->result();
     }
@@ -37,11 +39,11 @@ class Materi_model extends CI_Model
         return $this->db->count_all_results();
     }
 
-    
-    public function cek_tugas($id_user, $id_materi){
+
+    public function cek_tugas($id_user, $id_materi)
+    {
         $this->db->where('id_user', $id_user);
         $this->db->where('id_materi', $id_materi);
         return $this->db->get('tb_tugas')->row_array();
     }
-
 }

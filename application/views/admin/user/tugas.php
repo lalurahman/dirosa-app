@@ -13,7 +13,7 @@
                     </ol>
                 </div>
                 <div class="col s2 m6 l6">
-                   
+
                 </div>
             </div>
         </div>
@@ -33,17 +33,17 @@
                 </tr>
             </thead>
             <tbody>
-                <?php $no=1 ?>
-                <?php foreach($tugas_user as $tugas_user) : ?>
-                <tr>
-                    <td><?= $no++ ?></td>
-                    <td><?= $tugas_user['pertemuan'] ?></td>
-                    <td><?= $tugas_user['penilaian'] ?></td>
-                    <td><?= $tugas_user['status'] ?></td>
-                    <td>
-                        <a href="<?= base_url('user/detailtugasuser/'.$tugas_user['id_tugas']); ?>" class="waves-effect waves-light btn-small blue-text" ><i class="material-icons left">remove_red_eye</i></a> 
-                    </td>
-                </tr>
+                <?php $no = 1 ?>
+                <?php foreach ($tugas_user as $tugas_user) : ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $tugas_user['pertemuan'] ?></td>
+                        <td><?= $tugas_user['penilaian'] ?></td>
+                        <td><?= $tugas_user['status'] ?></td>
+                        <td>
+                            <a href="<?= base_url('user/detailtugasuser/' . $tugas_user['id_tugas']); ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
+                        </td>
+                    </tr>
 
                 <?php endforeach; ?>
             </tbody>
