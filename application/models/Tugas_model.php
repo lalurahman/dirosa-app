@@ -8,53 +8,56 @@ class Tugas_model extends CI_Model
         $this->db->select('
         tb_user.nama as nama_user, tb_ustadz.id_ustadz AS nama_ustadz, tb_materi.*, tb_tugas.date_created, tb_tugas.status, tb_tugas.id_tugas
         ');
-        $this->db->from('tb_tugas'); 
+        $this->db->from('tb_tugas');
         $this->db->join('tb_user', 'tb_user.id_user=tb_tugas.id_user', 'left');
         $this->db->join('tb_ustadz', 'tb_ustadz.id_ustadz=tb_tugas.id_ustadz', 'left');
         $this->db->join('tb_materi', 'tb_materi.id_materi=tb_tugas.id_materi', 'left');
+        $this->db->order_by('id_tugas', 'DESC');
 
-        return $this->db->get()->result_array(); 
+        return $this->db->get()->result_array();
     }
 
-    public function getTugasUser()
+    public function getTugasUser($id_user)
     {
         $this->db->select('
         tb_user.nama as nama_user, tb_ustadz.id_ustadz AS nama_ustadz, tb_materi.*, tb_tugas.date_created, tb_tugas.status, tb_tugas.id_tugas, tb_tugas.komentar, tb_tugas.penilaian
         ');
-        $this->db->from('tb_tugas'); 
+        $this->db->from('tb_tugas');
         $this->db->join('tb_user', 'tb_user.id_user=tb_tugas.id_user', 'left');
         $this->db->join('tb_ustadz', 'tb_ustadz.id_ustadz=tb_tugas.id_ustadz', 'left');
         $this->db->join('tb_materi', 'tb_materi.id_materi=tb_tugas.id_materi', 'left');
-        $this->db->order_by('id_tugas','DESC');
-        return $this->db->get()->result_array(); 
+        $this->db->order_by('id_tugas', 'DESC');
+        $this->db->where('tb_user.id_user', $id_user);
+
+        return $this->db->get()->result_array();
     }
 
     public function detailTugas($id_tugas)
     {
-         $this->db->select('
+        $this->db->select('
         tb_user.nama as nama_user, tb_ustadz.nama AS nama_ustadz, tb_materi.*, tb_tugas.date_created, tb_tugas.*
         ');
-        $this->db->from('tb_tugas'); 
+        $this->db->from('tb_tugas');
         $this->db->join('tb_user', 'tb_user.id_user=tb_tugas.id_user', 'left');
         $this->db->join('tb_ustadz', 'tb_ustadz.id_ustadz=tb_tugas.id_ustadz', 'left');
         $this->db->join('tb_materi', 'tb_materi.id_materi=tb_tugas.id_materi', 'left');
-        $this->db->where('tb_tugas.id_tugas',$id_tugas);
+        $this->db->where('tb_tugas.id_tugas', $id_tugas);
         return $this->db->get()->row_array();
     }
 
     public function detailTugasUser($id_tugas)
     {
-         $this->db->select('
+        $this->db->select('
         tb_user.nama as nama_user, tb_ustadz.nama AS nama_ustadz, tb_materi.*, tb_tugas.date_created, tb_tugas.*
         ');
-        $this->db->from('tb_tugas'); 
+        $this->db->from('tb_tugas');
         $this->db->join('tb_user', 'tb_user.id_user=tb_tugas.id_user', 'left');
         $this->db->join('tb_ustadz', 'tb_ustadz.id_ustadz=tb_tugas.id_ustadz', 'left');
         $this->db->join('tb_materi', 'tb_materi.id_materi=tb_tugas.id_materi', 'left');
-        $this->db->where('tb_tugas.id_tugas',$id_tugas);
+        $this->db->where('tb_tugas.id_tugas', $id_tugas);
         return $this->db->get()->row_array();
     }
-    
+
     public function editProgress()
     {
         $data = [
@@ -80,5 +83,4 @@ class Tugas_model extends CI_Model
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil</div>');
     }
-
 }

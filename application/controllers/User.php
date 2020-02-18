@@ -80,7 +80,7 @@ class User extends CI_Controller
     {
         $data['title'] = 'Progress Belajar - DirosApp';
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
-        $data['tugas_user'] = $this->tugas_model->getTugasUser();
+        $data['tugas_user'] = $this->tugas_model->getTugasUser($data['user']['id_user']);
         if ($this->session->userdata('role_id') == 3) {
             $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
             $data['content'] = 'admin/user/tugas';

@@ -16,7 +16,7 @@ class Tugas extends CI_Controller
         $data['title'] = 'Data Tugas - DirosApp';
         $data['tugas'] = $this->tugas_model->getTugas();
         $data['content'] = 'admin/tugas/index';
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
         $this->load->view('admin/index', $data);
     }
 
@@ -57,15 +57,18 @@ class Tugas extends CI_Controller
         $this->form_validation->set_rules('komentar', 'Komentar', 'trim|required');
         $this->form_validation->set_rules('status', 'Status', 'trim|required');
 
-        if($this->form_validation->run() == false){
+        if ($this->form_validation->run() == false) {
             $data['title'] = 'Data Tugas - DirosApp';
-            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
             $data['detail_tugas'] = $this->tugas_model->detailTugas($id_tugas);
             $data['content'] = 'admin/tugas/detail_tugas';
-        $this->load->view('admin/index', $data);
+            $this->load->view('admin/index', $data);
         } else {
-            $this->tugas_model->editProgress();
+            if ($this->input->post('status' == 'Lulus')) {
+                $this->tugas_model->editProgress();
+            }
             $this->tugas_model->editTugas(($id_tugas));
+
             redirect('tugas');
         }
     }
@@ -78,7 +81,7 @@ class Tugas extends CI_Controller
     public function detailTugas($id_tugas)
     {
         $data['title'] = 'Data Tugas - DirosApp';
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
         $data['detail_tugas'] = $this->tugas_model->detailTugas($id_tugas);
         $data['content'] = 'admin/tugas/detail_tugas';
         $this->load->view('admin/index', $data);
