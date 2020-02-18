@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 18, 2020 at 12:51 AM
+-- Generation Time: Feb 18, 2020 at 10:06 PM
 -- Server version: 5.7.17-log
 -- PHP Version: 5.6.30
 
@@ -42,8 +42,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nama`, `email`, `password`, `user_role`, `is_active`, `foto`, `date_created`) VALUES
-(1, 'Ryan', 'ryanpdw10@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 1, 1, 'default.png', '2020-02-16 04:57:59'),
-(2, 'Admin', 'admin@gmail.com', '$2y$10$3eVtVSdIxy47kQk/GpvugegbAn4seztjDfhc22O8kWQQuii96InOO', 1, 1, 'default.jpg', '0000-00-00 00:00:00');
+(1, 'Ryan', 'ryanpdw10@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 1, 1, 'default.png', '2020-02-16 04:57:59');
 
 -- --------------------------------------------------------
 
@@ -69,7 +68,21 @@ INSERT INTO `tb_materi` (`id_materi`, `pertemuan`, `penjelasan_pertemuan`, `link
 (4, 'Pertemuan ke - 4', 'Pertemuan Keempat mengenal huruf Lam sampai huruf Ya\'.', 'https://www.youtube.com/embed/YIQQfbqHajw'),
 (5, 'Pertemuan ke - 5', 'Pertemuan Kelima Mengulang semua huruf hijaiyah dan angka dalam tulisan arab.', 'https://www.youtube.com/embed/Gn8noyE7Vu0'),
 (6, 'Pertemuan ke - 6', 'Pertemuan Keenam mengenal tanda baca/harakat Fathah, kasrah, dan, Dhomah. Huruf Alif sampai huruf Sin', 'https://www.youtube.com/embed/uvf0k4J_LRg'),
-(7, 'Pertemuan ke - 7', 'Pertemuan Ketujuh mengenal tanda baca/harakat Fathah, Kasrah, dan, Dhomah. Huruf Syin sampai huruf Mim', 'https://www.youtube.com/embed/4dNbrupXSNU');
+(7, 'Pertemuan ke - 7', 'Pertemuan Ketujuh mengenal tanda baca/harakat Fathah, Kasrah, dan, Dhomah. Huruf Syin sampai huruf Mim', 'https://www.youtube.com/embed/4dNbrupXSNU'),
+(8, 'Pertemuan ke - 8', 'Pertemuan Kedelapan mengenal tanda baca/harakat Fathah, Kasrah, dan, Dhomah. Huruf Nun sampai huruf Ya\'', 'https://www.youtube.com/embed/GOMT1aECaEM'),
+(9, 'Pertemuan ke - 9', 'Pertemuan Kesembilan mengenal tanda baca/harakat Fathahan, kasrahan, dan Dhomatan', 'https://www.youtube.com/embed/O0ZBBwDKcl4'),
+(10, 'Pertemuan ke - 10', 'Pertemuan Kesepuluh mengenal bacaan Mad/bacaan panjang.', 'https://www.youtube.com/embed/yvDH-S7TW94'),
+(11, 'Pertemuan ke - 11', 'Pertemuan Kesebelas mengenal tanda bacaan panjang lainnya.', 'https://www.youtube.com/embed/GPgWmr7ohSM'),
+(12, 'Pertemuan ke - 12', 'Pertemuan Keduabelas mengenal tanda Tasydid/Syaddah', 'https://www.youtube.com/embed/eAL3iean-8c'),
+(13, 'Pertemuan ke - 13', 'Pertemuan Ketigabelas mengenal tanda sukun', 'https://www.youtube.com/embed/QbrdsYsowr8'),
+(14, 'Pertemuan ke - 14', 'Pertemuan Keempatbelas mengenal tanda Baina dan Bauna serta tanda Qolqolah', 'https://www.youtube.com/embed/yH4w_RAi_lE'),
+(15, 'Pertemuan ke - 15', 'Pertemuan Kelimabelas membedakan penyebutan Hamzah Ain Kaf dan Qaf', 'https://www.youtube.com/embed/9R1iybK4Nqk'),
+(16, 'Pertemuan ke - 16', 'Pertemuan Keenambelas mengenal Lam Qamariyah, Lam Syamsiyah dan huruf Ghunnah', 'https://www.youtube.com/embed/zY0Q_8zdmQI'),
+(17, 'Pertemuan ke - 17', 'Pertemuan Ketujuhbelas mengenal tanda Wakaf dan Idgam', 'https://www.youtube.com/embed/UyrCMKmFsys'),
+(18, 'Pertemuan ke - 18', 'Pertemuan Kedelapanbelas mengenal bacaan Iqlab dan Idgam Mimi', 'https://www.youtube.com/embed/hvow5J4qJ1A'),
+(19, 'Pertemuan ke - 19', 'Pertemuan Kesembilanbelas mengenal Ikhfah dan Idzhar', 'https://www.youtube.com/embed/urV6EY99NNo'),
+(20, 'Pertemuan ke - 20', 'Pertemuan Keduapuluh mengenal huruf-huruf Muqathaah', 'https://www.youtube.com/embed/3tYyzD46qeg'),
+(21, 'Pertemuan Terkakhir - Ujian', 'Ujian DIROSA Halaman ini adalah halaman Munaqosyah/Ujian kemampuan membaca Al-Qur\'an', 'https://www.youtube.com/embed/hoIUnrUKaqA');
 
 -- --------------------------------------------------------
 
@@ -88,7 +101,9 @@ CREATE TABLE `tb_progress_belajar` (
 --
 
 INSERT INTO `tb_progress_belajar` (`id_progress_belajar`, `id_user`, `id_materi`) VALUES
-(1, 1, 2);
+(5, 1, 1),
+(6, 6, 1),
+(7, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -114,16 +129,7 @@ CREATE TABLE `tb_tugas` (
 --
 
 INSERT INTO `tb_tugas` (`id_tugas`, `link_tugas`, `id_user`, `id_ustadz`, `id_materi`, `penilaian`, `komentar`, `status`, `date_created`, `tgl_periksa`) VALUES
-(8, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(9, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(10, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(11, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(12, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(13, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(14, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(15, 'dirosa06b.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 15:51:44', NULL),
-(16, 'dirosa061.mp3', 1, 0, 2, 0, '', 'Belum Diperiksa', '2020-02-17 16:19:05', NULL),
-(17, 'dirosa07.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-17 16:19:44', NULL);
+(20, 'dirosa07b1.mp3', 1, 0, 1, 0, '', 'Belum Diperiksa', '2020-02-18 13:15:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -153,7 +159,8 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id_user`, `nama`, `jk`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `pekerjaan`, `email`, `password`, `user_role`, `is_active`, `foto`, `date_created`) VALUES
 (1, 'User', 'Laki-laki', 'Makassar', '1996-02-16', 'Perintis', 'Mahasiswa', 'user@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 3, 1, 'default.png', '2020-02-17 12:33:17'),
-(2, 'User3', 'Perempuan', 'Makassar', '1998-10-03', 'alamat', 'pekerjaan', 'user3@gmail.com', '$2y$10$41wqnQXCNM/mzjMbA87r9eC1aQyDQHMPaCREOARCxSnBNnZACDkba', 3, 1, 'default.jpg', '2020-02-17 16:03:15');
+(6, 'User 2', 'Laki-laki', 'Makassar', '1998-01-01', 'alamat', 'pekerjaan', 'user2@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 3, 1, 'default.png', '2020-02-18 12:51:58'),
+(7, 'User3', 'Perempuan', 'Makassar', '1997-06-17', 'alamat', 'pekerjaan', 'user3@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 3, 1, 'default.png', '2020-02-18 12:52:00');
 
 -- --------------------------------------------------------
 
@@ -165,6 +172,15 @@ CREATE TABLE `tb_user_role` (
   `id_user_role` int(11) NOT NULL,
   `nama_role` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_user_role`
+--
+
+INSERT INTO `tb_user_role` (`id_user_role`, `nama_role`) VALUES
+(1, 'Admin'),
+(2, 'Ustadz'),
+(3, 'Pengguna');
 
 -- --------------------------------------------------------
 
@@ -188,9 +204,7 @@ CREATE TABLE `tb_ustadz` (
 --
 
 INSERT INTO `tb_ustadz` (`id_ustadz`, `nama`, `email`, `password`, `user_role`, `is_active`, `foto`, `date_created`) VALUES
-(1, 'Ustadz', 'ustadz@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 2, 1, 'default.png', '2020-02-16 04:58:24'),
-(2, 'Ustdaz', 'ustadz@gmail.com', '$2y$10$r.VaVjVjoNDAJS2kbt5EP.p1ViDjJZbLLpaGk/cxrDgL3GHSNJR.a', 2, 1, 'default.jpg', '0000-00-00 00:00:00'),
-(3, 'Ustad 3', 'ustad3@gmail.com', '$2y$10$tNIWGO9bgBO8PinSYTSn.O9eo.b4O0BcAYNewd1Pfq7r51lxMPTQW', 2, 1, 'default.jpg', '0000-00-00 00:00:00');
+(1, 'Ustadz', 'ustadz@gmail.com', '$2y$10$dip1R1xjLIavnh/Yv25fzu26tLHsVOmGn9bNcavTGM8MPlP2xvuVC', 2, 1, 'default.png', '2020-02-16 04:58:24');
 
 --
 -- Indexes for dumped tables
@@ -246,37 +260,37 @@ ALTER TABLE `tb_ustadz`
 -- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tb_materi`
 --
 ALTER TABLE `tb_materi`
-  MODIFY `id_materi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_materi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `tb_progress_belajar`
 --
 ALTER TABLE `tb_progress_belajar`
-  MODIFY `id_progress_belajar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_progress_belajar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_tugas`
 --
 ALTER TABLE `tb_tugas`
-  MODIFY `id_tugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_tugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_user_role`
 --
 ALTER TABLE `tb_user_role`
-  MODIFY `id_user_role` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_ustadz`
 --
 ALTER TABLE `tb_ustadz`
-  MODIFY `id_ustadz` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_ustadz` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
