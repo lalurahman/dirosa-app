@@ -8,6 +8,7 @@ class Tugas extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('tugas_model');
+        $this->load->model('materi_model');
     }
 
 
@@ -22,33 +23,18 @@ class Tugas extends CI_Controller
 
     public function tambahTugas()
     {
-        $data = [
-            "id_user" =>   $this->input->post('id_user'),
-            "id_materi" => $this->input->post('id_materi'),
-            "status" => "Belum Diperiksa"
-        ];
-        $upload_image = $_FILES['berkas']['name'];
+        $this->form_validation->set_rules('nama_berkas', 'Nama Berkas', 'required');
 
-        if ($upload_image) {
-            $config['allowed_types']        = 'mp3';
-            $config['max_size']             = 5140;
-            $config['upload_path']          = './assets/tugas/';
-
-            $this->load->library('upload', $config);
-
-
-            if ($this->upload->do_upload('berkas')) {
-                $new_berkas = $this->upload->data('file_name');
-                $this->db->set('link_tugas', $new_berkas);
-            } else {
-                echo $this->upload->display_errors();
-            }
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+        if ($this->form_validation->run() == false) {
+            $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">File tugas belum dipilih!</div>');
+            redirect('materi/pertemuan/'.$data['progress_belajar']['id_materi']);
+        } else {
+            $this->tugas_model->tambahTugas();
+            redirect('materi/pertemuan/'.$data['progress_belajar']['id_materi']);
         }
-
-        $this->db->insert('tb_tugas', $data);
-
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil Dikirim</div>');
-        redirect('materi/pertemuan/1');
+        
     }
 
     public function editTugas($id_tugas)
@@ -67,7 +53,7 @@ class Tugas extends CI_Controller
             if ($this->input->post('status') == 'Lulus') {
                 $this->tugas_model->editProgress();
             }
-            $this->tugas_model->editTugas(($id_tugas));
+            $this->tugas_model->editTugas($id_tugas);
 
             redirect('tugas');
         }

@@ -6,12 +6,10 @@ class User extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
         $this->load->model('user_model');
         $this->load->model('materi_model');
         $this->load->model('tugas_model');
-
-        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+        is_logged_in();
     }
 
 

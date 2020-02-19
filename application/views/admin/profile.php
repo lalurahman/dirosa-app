@@ -5,8 +5,7 @@
     <div class="row">
         <div class="col s12 m8 l8">
             <div id="profile-card" class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="<?= base_url('assets/admin/') ?>images/gallary/10.png" alt="user bg">
+                <div class="card-image waves-effect waves-block waves-light blue lighten-1">
                 </div>
                 <div class="card-content">
                     <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="" class="circle responsive-img activator card-profile-image white  z-depth-2">

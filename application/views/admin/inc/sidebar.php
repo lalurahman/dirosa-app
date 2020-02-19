@@ -1,7 +1,7 @@
 <!-- START LEFT SIDEBAR NAV-->
 <aside id="left-sidebar-nav">
     <ul id="slide-out" class="side-nav fixed leftside-navigation">
-        <li class="user-details blue lighten-3">
+        <li class="user-details blue lighten-1">
             <div class="row">
                 <div class="col col s4 m4 l4">
                     <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="" class="circle responsive-img valign profile-image cyan">

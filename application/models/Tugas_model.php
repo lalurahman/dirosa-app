@@ -83,4 +83,35 @@ class Tugas_model extends CI_Model
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil</div>');
     }
+
+    public function tambahTugas()
+    {
+        $data = [
+            "id_user" =>   $this->input->post('id_user'),
+            "id_materi" => $this->input->post('id_materi'),
+            "status" => "Belum Diperiksa"
+        ];
+        $upload_image = $_FILES['berkas']['name'];
+
+        if ($upload_image) {
+            $config['allowed_types']        = 'mp3';
+            $config['max_size']             = 5140;
+            $config['upload_path']          = './assets/tugas/';
+
+            $this->load->library('upload', $config);
+
+
+            if ($this->upload->do_upload('berkas')) {
+                $new_berkas = $this->upload->data('file_name');
+                $this->db->set('link_tugas', $new_berkas);
+            } else {
+                echo $this->upload->display_errors();
+            }
+        }
+
+        $this->db->insert('tb_tugas', $data);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil Dikirim</div>');
+        redirect('materi/pertemuan/1');
+    }
 }

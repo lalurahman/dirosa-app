@@ -46,7 +46,7 @@
                   </div>
                   <div class="input-field col s12 ">
                     <audio controls>
-                      <source src="<?= base_url('assets/audio/').$detail_tugas['link_tugas']; ?>" width="100%" type="audio/mp3">
+                      <source src="<?= base_url('assets/tugas/').$detail_tugas['link_tugas']; ?>" width="100%" type="audio/mp3">
                     </audio>
                 </div>
               </div>
