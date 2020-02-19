@@ -81,7 +81,7 @@
                         <?php endif; ?>
 
                         <?php if ($cek_tugas && $cek_tugas['status'] == 'Belum Diperiksa') : ?>
-                            <p>Tugas sedang diproses, silahkan cek menu<a href="">Tugas</a></p>
+                            <p>Tugas anda sedang diproses!</p>
                         <?php elseif ($cek_tugas['status'] == 'Belum Lulus') : ?>
                             <p>Silahkan kirim file rekaman hasil belajar anda pada pertemuan ini!</p>
                             <?php echo form_open_multipart('tugas/tambahTugas') ?>

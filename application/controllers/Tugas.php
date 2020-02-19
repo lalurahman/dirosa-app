@@ -64,7 +64,7 @@ class Tugas extends CI_Controller
             $data['content'] = 'admin/tugas/detail_tugas';
             $this->load->view('admin/index', $data);
         } else {
-            if ($this->input->post('status' == 'Lulus')) {
+            if ($this->input->post('status') == 'Lulus') {
                 $this->tugas_model->editProgress();
             }
             $this->tugas_model->editTugas(($id_tugas));
