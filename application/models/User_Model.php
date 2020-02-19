@@ -20,10 +20,10 @@ class User_model extends CI_Model
             // 'date_created' => time("Y/m/d H:iP")
         ];
         $this->db->insert('tb_user', $data);
-        
-        
-        
-        
+
+
+
+
         $this->db->order_by('id_user', 'DESC');
         $id_user = $this->db->get('tb_user')->row_array();
 

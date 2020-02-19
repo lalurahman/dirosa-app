@@ -11,13 +11,12 @@ class Admin_model extends CI_Model
             'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
             'user_role' => 1,
             'is_active' => 1,
-            'foto' => 'default.jpg'
+            'foto' => 'default.png'
 
         ];
 
         $this->db->insert('tb_admin', $data);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
-
     }
 
     public function hapus($data)

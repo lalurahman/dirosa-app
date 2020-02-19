@@ -27,7 +27,8 @@
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link href="<?= base_url('assets/admin/') ?>vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet">
     <link href="<?= base_url('assets/admin/') ?>css/style-bootstrap.css" type="text/css" rel="stylesheet">
-
+    <link rel="manifest" href="<?= base_url('manifest.json') ?>">
+    <link rel="apple-touch-icon" href="<?= base_url('icon.png') ?>">
     <script>
         function startTime() {
             var today = new Date();

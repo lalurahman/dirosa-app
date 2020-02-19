@@ -4,7 +4,7 @@
         <li class="user-details blue lighten-1">
             <div class="row">
                 <div class="col col s4 m4 l4">
-                    <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="" class="circle responsive-img valign profile-image cyan">
+                    <img src="<?= base_url('assets/img/users/') . $user['foto'] ?>" alt="" class="circle responsive-img valign profile-image cyan">
                 </div>
                 <div class="col col s8 m8 l8">
 
@@ -72,7 +72,7 @@
                         </a>
                     </li>
                 <?php endif; ?>
-                
+
 
 
                 <?php if ($this->session->userdata['role_id'] == 3) : ?>
@@ -83,7 +83,7 @@
                         </a>
                     </li>
                     <li class="bold">
-                        <a href="<?= base_url('materi/pertemuan/'.$progress_belajar['id_materi']) ?>" class="waves-effect waves-cyan">
+                        <a href="<?= base_url('materi/pertemuan/' . $progress_belajar['id_materi']) ?>" class="waves-effect waves-cyan">
                             <i class="material-icons">library_books</i>
                             <span class="nav-text">Materi</span>
                         </a>
@@ -91,15 +91,21 @@
                 <?php endif; ?>
 
 
-                <?php if ($this->session->userdata['role_id'] == 2 ) :   ?>
+                <?php if ($this->session->userdata['role_id'] == 2) :   ?>
 
                     <li class="bold">
                         <a href="<?= base_url('tugas') ?>" class="waves-effect waves-cyan">
-                            <i class="material-icons">peoples</i>
+                            <i class="material-icons">library_books</i>
                             <span class="nav-text">Data Tugas</span>
                         </a>
                     </li>
                 <?php endif; ?>
+                <li class="bold">
+                    <a href="<?= base_url('auth/logout') ?>" class="waves-effect waves-cyan" onclick="return confirm('Yakin ingin keluar ? ');">
+                        <i class="material-icons">exit_to_app</i>
+                        <span class="nav-text">Keluar</span>
+                    </a>
+                </li>
             </ul>
         </li>
     </ul>

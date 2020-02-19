@@ -77,7 +77,7 @@
                         <!-- <i class="mdi-image-flash-on"></i> -->
                         <i class="material-icons">done</i>
                         <h5 class="promo-caption">Waktu Belajar Yang Cepat</h5>
-                        <p class="light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                        <p class="light">Dengan belajar Al-Quran dengan metode dirosa, tidak membutuhkan waktu yang lama untuk belajar.</p>
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
@@ -85,15 +85,15 @@
                         <!-- <i class=""></i>mdi-social-group -->
                         <i class="material-icons">done</i>
                         <h5 class="promo-caption">20 Kali Pertemuan</h5>
-                        <p class="light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="light">Belajar Al-Qur'an dengan metode dirosa hanya membutuhkan waktu 20 kali pertemuan.</p>
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
                     <div class="center promo promo-example">
                         <!-- <i class="mdi-hardware-desktop-windows"></i> -->
                         <i class="material-icons">done</i>
-                        <h5 class="promo-caption">Pertemuan Sekali Sepekan</h5>
-                        <p class="light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                        <h5 class="promo-caption">Untuk Orang Dewasa</h5>
+                        <p class="light">Metode belajar ini sangat cocok apabila digunakan oleh orang dewasa yang baru belajar Al-Qur'an.</p>
                     </div>
                 </div>
 

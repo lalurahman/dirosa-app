@@ -13,6 +13,7 @@
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
 <script type="text/javascript" src="<?= base_url('assets/admin/') ?>js/plugins.js"></script>
 
+<script src="<?= base_url('') ?>js/sw.js"></script>
 </body>
 
 </html>

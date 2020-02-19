@@ -14,7 +14,7 @@
                     </ol>
                 </div>
                 <div class="col s2 m6 l6">
-                   
+
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <table class="bordered striped">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <!-- <th>No</th> -->
                     <th>Nama Pengguna</th>
                     <th>Judul Materi</th>
                     <th>Status</th>
@@ -35,18 +35,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php $no=1 ?>
-                <?php foreach($tugas as $tugas) : ?>
-                <tr>
-                    <td><?= $no++ ?></td>
-                    <td><?= $tugas['nama_user'] ?></td>
-                    <td><?= $tugas['pertemuan'] ?></td>
-                    <td><?= $tugas['status'] ?></td>
-                    <td><?= date('d-m-Y', strtotime($user['date_created']));  ?></td>
-                    <td>
-                        <a href="<?= base_url('tugas/detailtugas/'.$tugas['id_tugas']); ?>" class="waves-effect waves-light btn-small blue-text" ><i class="material-icons left">remove_red_eye</i></a> 
-                    </td>
-                </tr>
+                <!-- <?php $no = 1 ?> -->
+                <?php foreach ($tugas as $tugas) : ?>
+                    <tr>
+                        <!-- <td><?= $no++ ?></td> -->
+                        <td><?= $tugas['nama_user'] ?></td>
+                        <td><?= $tugas['pertemuan'] ?></td>
+                        <td><?= $tugas['status'] ?></td>
+                        <td><?= date('d-m-Y', strtotime($user['date_created']));  ?></td>
+                        <td>
+                            <a href="<?= base_url('tugas/detailtugas/' . $tugas['id_tugas']); ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
+                        </td>
+                    </tr>
 
                 <?php endforeach; ?>
             </tbody>

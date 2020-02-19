@@ -9,7 +9,6 @@ class User extends CI_Controller
         $this->load->model('user_model');
         $this->load->model('materi_model');
         $this->load->model('tugas_model');
-        is_logged_in();
     }
 
 
