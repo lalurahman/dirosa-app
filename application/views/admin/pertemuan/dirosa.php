@@ -31,7 +31,7 @@
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 1 bagian 2</p>
                                     <audio controls>
-                                        <source src="<?= base_url('assets/audio/dirosa01.mp3') ?>" width="100%" type="audio/mp3">
+                                        <source src="<?= base_url('assets/audio/dirosa01b.mp3') ?>" width="100%" type="audio/mp3">
                                     </audio>
                                 </div>
                             </div>
@@ -59,9 +59,73 @@
                                 </div>
                             </div>
                         <?php elseif ($progress_belajar_aktiv == 3) : ?>
-
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa03.jpg') ?>" width="100%">
+                                </div>
+                                <div class="col s12 m6">
+                                    <p class="center">Audio Pertemuan 3 bagian 1</p>
+                                    <audio controls>
+                                        <source src="<?= base_url('assets/audio/dirosa03.mp3') ?>" width="100%" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa03b.jpg') ?>" width="100%">
+                                </div>
+                                <div class="col s12 m6">
+                                    <p class="center">Audio Pertemuan 3 bagian 2</p>
+                                    <audio controls>
+                                        <source src="<?= base_url('assets/audio/dirosa03b.mp3') ?>" width="100%" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
                         <?php elseif ($progress_belajar_aktiv == 4) : ?>
-
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04.jpg') ?>" width="100%">
+                                </div>
+                                <div class="col s12 m6">
+                                    <p class="center">Audio Pertemuan 4 bagian 1</p>
+                                    <audio controls>
+                                        <source src="<?= base_url('assets/audio/dirosa04.mp3') ?>" width="100%" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04b.jpg') ?>" width="100%">
+                                </div>
+                                <div class="col s12 m6">
+                                    <p class="center">Audio Pertemuan 4 bagian 2</p>
+                                    <audio controls>
+                                        <source src="<?= base_url('assets/audio/dirosa04b.mp3') ?>" width="100%" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04c.jpg') ?>" width="100%">
+                                </div>
+                                <div class="col s12 m6">
+                                    <p class="center">Audio Pertemuan 4 bagian 3</p>
+                                    <audio controls>
+                                        <source src="<?= base_url('assets/audio/dirosa04c.mp3') ?>" width="100%" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04d.jpg') ?>" width="100%">
+                                </div>
+                                <div class="col s12 m6">
+                                    <p class="center">Audio Pertemuan 4 bagian 4</p>
+                                    <audio controls>
+                                        <source src="<?= base_url('assets/audio/dirosa04d.mp3') ?>" width="100%" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
                         <?php elseif ($progress_belajar_aktiv == 5) : ?>
                         <?php elseif ($progress_belajar_aktiv == 6) : ?>
                         <?php elseif ($progress_belajar_aktiv == 7) : ?>
@@ -113,13 +177,15 @@
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Berkas</span>
-                                        <input type="file" name="berkas" accept="doc/docx/pdf">
+                                        <input type="file" name="berkas" accept="mp3">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
                                     </div>
                                 </div>
+                                
                             </div>
+                    <?= form_error('nama_berkas', '<small class="red-text">', '</small>') ?>
                             <input type="hidden" name="id_materi" value="<?= $materi->id_materi ?>">
                             <input type="hidden" name="id_user" value="<?= $user['id_user'] ?>">
                             <div class="col s4">
@@ -133,7 +199,7 @@
 
                 </div>
 
-            </div>
+            </div> 
         <?php endforeach; ?>
 
         <?php $this->load->view('admin/pertemuan/inc/menu') ?>
