@@ -3,6 +3,11 @@
 class Ustadz_model extends CI_Model
 {
 
+    public function getUstadz()
+    {
+        return $this->db->get('tb_ustadz')->result();
+    }
+
     public function tambah_ustadz()
     {
         $data = [
@@ -23,5 +28,11 @@ class Ustadz_model extends CI_Model
     {
         $this->db->where('id_ustadz', $data['id_ustadz']);
         $this->db->delete('tb_ustadz', $data);
+    }
+
+    public function edit($where, $data, $table)
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
     }
 }
