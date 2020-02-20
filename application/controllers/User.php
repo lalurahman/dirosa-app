@@ -55,9 +55,12 @@ class User extends CI_Controller
 
     }
 
-    public function hapusUser()
+    public function hapusUser($id_user)
     {
-        # code...
+        $data['id_user'] = $id_user;
+        $this->user_model->hapus($data);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
+        redirect('user');
     }
 
     public function profile()

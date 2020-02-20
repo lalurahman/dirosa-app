@@ -24,7 +24,7 @@
         <table class="bordered striped ">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <!-- <th>No</th> -->
                     <th>Pertemuan</th>
                     <th>Nilai</th>
                     <th>Status</th>
@@ -36,7 +36,7 @@
                 <?php $no = 1 ?>
                 <?php foreach ($tugas_user as $tugas_user) : ?>
                     <tr>
-                        <td><?= $no++ ?></td>
+                        <!-- <td><?= $no++ ?></td> -->
                         <td><?= $tugas_user['pertemuan'] ?></td>
                         <td><?= $tugas_user['penilaian'] ?></td>
                         <td><?= $tugas_user['status'] ?></td>

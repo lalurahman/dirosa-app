@@ -10,11 +10,7 @@
                     <div class="card-content white-text">
                         <span class="card-title"><?= $materi->pertemuan ?></span>
                         <small class="black-text white">Sumber Video dari Youtube Chanel: <a href="https://www.youtube.com/watch?v=F7BywK6mVLU&list=PLuIq4XhtbYD6tkPlN5qyaeaSW14ljqQKb" target="_blank" class="red-text">Al Kahfi Channel</a></small>
-                        <iframe src="<?= $materi->link_video ?>" width="100%" height="400px" frameborder="0" class="mb-2" allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen" 
-        msallowfullscreen="msallowfullscreen" 
-        oallowfullscreen="oallowfullscreen" 
-        webkitallowfullscreen="webkitallowfullscreen"></iframe>
+                        <iframe src="<?= $materi->link_video ?>" width="100%" height="400px" frameborder="0" class="mb-2" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
                         <p class="mb-2"><?= $materi->penjelasan_pertemuan ?></p>
 
                         <?php if ($progress_belajar_aktiv == 1) : ?>
@@ -568,11 +564,11 @@
                         <?php endif; ?>
 
                         <?php if ($cek_tugas && $cek_tugas['status'] == 'Belum Diperiksa') : ?>
-                            <p>Tugas sedang diproses, silahkan cek menu<a href="">Tugas</a></p>
+                            <p>Tugas anda sedang diproses!</a></p>
                         <?php elseif ($cek_tugas['status'] == 'Belum Lulus') : ?>
                             <p>Silahkan kirim file rekaman hasil belajar anda pada pertemuan ini!</p>
                             <?php echo form_open_multipart('tugas/tambahTugas') ?>
-                            <div class="input-field col s8">
+                            <div class="input-field col s12 m12">
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Berkas</span>
@@ -585,8 +581,8 @@
                             </div>
                             <input type="hidden" name="id_materi" value="<?= $materi->id_materi ?>">
                             <input type="hidden" name="id_user" value="<?= $user['id_user'] ?>">
-                            <div class="col s4">
-                                <button class="btn waves-effect waves-light right green accent-4" type="submit" name="btn_edit">Kirim
+                            <div class="col s12 m12 mb-8">
+                                <button class="btn waves-effect waves-light green accent-4" type="submit" name="btn_edit">Kirim
                                     <i class="material-icons right">send</i>
                                 </button>
                                 </form>
@@ -596,7 +592,7 @@
                         <?php else : ?>
                             <p>Silahkan kirim file rekaman hasil belajar anda pada pertemuan ini!</p>
                             <?php echo form_open_multipart('tugas/tambahTugas') ?>
-                            <div class="input-field col s8">
+                            <div class="input-field col s12 m12">
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Berkas</span>
@@ -606,13 +602,13 @@
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
                                     </div>
                                 </div>
-                                
+
                             </div>
-                    <?= form_error('nama_berkas', '<small class="red-text">', '</small>') ?>
+                            <?= form_error('nama_berkas', '<small class="red-text">', '</small>') ?>
                             <input type="hidden" name="id_materi" value="<?= $materi->id_materi ?>">
                             <input type="hidden" name="id_user" value="<?= $user['id_user'] ?>">
-                            <div class="col s4">
-                                <button class="btn waves-effect waves-light right green accent-4" type="submit" name="btn_edit">Kirim
+                            <div class="col s12 m12 mb-8">
+                                <button class="btn waves-effect waves-light green accent-4" type="submit" name="btn_edit">Kirim
                                     <i class="material-icons right">send</i>
                                 </button>
                                 </form>
@@ -622,7 +618,7 @@
 
                 </div>
 
-            </div> 
+            </div>
         <?php endforeach; ?>
 
         <?php $this->load->view('admin/pertemuan/inc/menu') ?>

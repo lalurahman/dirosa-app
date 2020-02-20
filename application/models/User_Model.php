@@ -37,4 +37,10 @@ class User_model extends CI_Model
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! anda berhasil mendaftar :)</div>');
         redirect('auth');
     }
+
+    public function hapus($data)
+    {
+        $this->db->where('id_user', $data['id_user']);
+        $this->db->delete('tb_user', $data);
+    }
 }

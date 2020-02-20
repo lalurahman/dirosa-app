@@ -88,6 +88,9 @@ class Tugas_model extends CI_Model
     {
         $data = [
             "id_user" =>   $this->input->post('id_user'),
+            "id_ustadz" => 0,
+            "penilaian" => 0,
+            "komentar" => "-",
             "id_materi" => $this->input->post('id_materi'),
             "status" => "Belum Diperiksa"
         ];
@@ -95,7 +98,7 @@ class Tugas_model extends CI_Model
 
         if ($upload_image) {
             $config['allowed_types']        = 'mp3';
-            $config['max_size']             = 5140;
+            $config['max_size']             = 10140;
             $config['upload_path']          = './assets/tugas/';
 
             $this->load->library('upload', $config);

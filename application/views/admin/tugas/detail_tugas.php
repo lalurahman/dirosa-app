@@ -19,7 +19,22 @@
   </div>
   <!--breadcrumbs end-->
   <!--start container-->
-  <div class="container mt-2">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Standar Penilaian</span>
+            <p>10 - 30 = Kurang Sekali</p>
+            <p>31 - 70 = Kurang Baik</p>
+            <p>71 - 80 = Cukup Baik</p>
+            <p>81 - 99 = Baik Sekali</p>
+            <p><small>syarat lulus ke pertemuan berikutnya : nilai > 70</small></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
     <form class="col s12" method="post" action="<?= base_url('tugas/edittugas/') . $detail_tugas['id_tugas'] ?>">
       <input type="hidden" value="<?= $user['id_ustadz']; ?>" name="id_ustadz">
       <input type="hidden" value="<?= $detail_tugas['id_materi'] + 1;  ?>" name="id_materi">
@@ -62,6 +77,34 @@
               <label for="komentar">Komentar</label>
               <textarea id="komentar" name="komentar" class="materialize-textarea" readonly><?= $detail_tugas['komentar']  ?></textarea>
               <?= form_error('komentar', '<small class="red-text left">', '</small>'); ?>
+            </div>
+
+            <div class="input-field col s12">
+              Diperiksa Oleh : <?= $detail_tugas['nama_ustadz']  ?>
+
+            </div>
+
+          <?php elseif ($detail_tugas['status'] == 'Belum Lulus') : ?>
+            <div class="input-field col s12">
+              <input id="penilaian" name="penilaian" type="number" value="<?= $detail_tugas['penilaian'] ?>" readonly>
+              <label for="penilaian">Nilai</label>
+              <?= form_error('penilaian', '<small class="text-danger pl-3">', '</small>') ?>
+            </div>
+
+            <div class="input-field col s12">
+              <label for="komentar">Komentar</label>
+              <textarea id="komentar" name="komentar" class="materialize-textarea" readonly><?= $detail_tugas['komentar']  ?></textarea>
+              <?= form_error('komentar', '<small class="red-text left">', '</small>'); ?>
+            </div>
+
+            <div class="input-field col s12">
+              <select name="status">
+                <option value="" disabled selected>Pilih Status</option>
+                <option value="Lulus" <?php if (set_value('status') == "Lulus") echo "selected" ?>>Lulus</option>
+                <option value="Belum Lulus" <?php if (set_value('status') == "Belum Lulus") echo "selected" ?>>Belum Lulus</option>
+              </select>
+              <label>Status</label>
+              <?= form_error('jk', '<small class="red-text">', '</small>') ?>
             </div>
 
             <div class="input-field col s12">

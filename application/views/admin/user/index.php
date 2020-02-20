@@ -5,6 +5,8 @@
 
         <div class="container">
             <div class="row">
+                <?= $this->session->flashdata('message') ?>
+
                 <div class="col s10 m6 l6">
                     <h5 class="breadcrumbs-title"></h5>
                     <ol class="breadcrumbs pt-4">
