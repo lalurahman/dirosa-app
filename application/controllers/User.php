@@ -7,8 +7,10 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->model('ustadz_model');
         $this->load->model('materi_model');
         $this->load->model('tugas_model');
+        $this->load->model('admin_model');
     }
 
 
@@ -49,11 +51,6 @@ class User extends CI_Controller
         }
     }
 
-    public function editUser()
-    {
-        # code...
-
-    }
 
     public function hapusUser($id_user)
     {
@@ -103,5 +100,59 @@ class User extends CI_Controller
             $data['content'] = 'admin/profile';
         }
         $this->load->view('admin/index', $data);
+    }
+
+    public function editProfile()
+    {
+
+        if ($this->session->userdata['role_id'] == 3) {
+
+            $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+            $this->form_validation->set_rules('email', 'Email', 'trim|required');
+            $this->form_validation->set_rules('jk', 'Jenis Kelamin', 'trim|required');
+            $this->form_validation->set_rules('pekerjaan', 'Pekerjaan', 'trim|required');
+            $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
+            $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+            $this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+
+            if ($this->form_validation->run() == false) {
+                $data['title'] = 'Edit Pengguna - DirosApp';
+                $data['user'] = $this->db->get('tb_user')->result();
+                $data['content'] = 'admin/user/edit-user';
+                $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+                $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
+
+                $this->load->view('admin/index', $data);
+            } else {
+                $this->user_model->editUser();
+            }
+        } else if ($this->session->userdata['role_id'] == 2) {
+
+            $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+
+            if ($this->form_validation->run() == false) {
+                $data['title'] = 'Edit Ustadz - DirosApp';
+                $data['ustadz'] = $this->db->get('tb_ustadz')->result();
+                $data['content'] = 'admin/ustadz/edit-ustadz';
+                $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+                // login_admin($data['user']['user_role']);
+                $this->load->view('admin/index', $data);
+            } else {
+                $this->ustadz_model->editUstadz();
+            }
+        } else {
+            $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+
+            if ($this->form_validation->run() == false) {
+                $data['title'] = 'Edit Admin - DirosApp';
+                $data['admin'] = $this->db->get('tb_admin')->result();
+                $data['content'] = 'admin/edit-data-admin';
+                $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+                login_admin($data['user']['user_role']);
+                $this->load->view('admin/index', $data);
+            } else {
+                $this->admin_model->editAdmin();
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 <body>
 
-    <div class="container" style="margin-top: 50px; ">
+    <div class="container" style="margin-top: 100px; ">
         <div class="row">
             <!-- Form with validation -->
             <div class="col s12 m6 offset-m3">

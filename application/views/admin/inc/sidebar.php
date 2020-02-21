@@ -85,7 +85,7 @@
                     <li class="bold">
                         <a href="<?= base_url('materi/pertemuan/' . $progress_belajar['id_materi']) ?>" class="waves-effect waves-cyan">
                             <i class="material-icons">library_books</i>
-                            <span class="nav-text">Materi</span>
+                            <span class="nav-text">Belajar</span>
                         </a>
                     </li>
                 <?php endif; ?>
