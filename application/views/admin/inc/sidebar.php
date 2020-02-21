@@ -4,7 +4,7 @@
         <li class="user-details blue lighten-1">
             <div class="row">
                 <div class="col col s4 m4 l4">
-                    <img src="<?= base_url('assets/img/users/') . $user['foto'] ?>" alt="" class="circle responsive-img valign profile-image cyan">
+                    <img src="<?= base_url('assets/img/users/') . $user['foto'] ?>" alt="" class=" rounded-circle center-cropped" style="width: 65px; height: 65px;">
                 </div>
                 <div class="col col s8 m8 l8">
 

@@ -52,4 +52,17 @@ class Ustadz extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
         redirect('ustadz');
     }
+
+    
+public function detailuser($id)
+{
+    
+    $data['title'] = 'Detail Tugas - DirosApp';
+
+    $data['user'] = $this->ustadz_model->get_userbyid($id);
+
+    $data['content'] = 'admin/ustadz/detail_user';
+
+    $this->load->view('admin/index', $data);
+}
 }

@@ -65,7 +65,7 @@
           </div>
 
           <div class="input-field col s12">
-            Diperiksa Oleh : <?= $detail_tugas_user['nama_ustadz']  ?>
+            Diperiksa Oleh : Ust. <?= $detail_tugas_user['nama_ustadz']  ?>
 
           </div>
 

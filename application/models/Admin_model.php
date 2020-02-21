@@ -51,7 +51,7 @@ class Admin_model extends CI_Model
         $this->db->where('email', $data['email']);
         $this->db->update('tb_admin', $data);
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your profile has been updated!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Profil berhasil diubah</div>');
         redirect('user/profile');
     }
 
@@ -59,5 +59,11 @@ class Admin_model extends CI_Model
     {
         $this->db->where('id_admin', $data['id_admin']);
         $this->db->delete('tb_admin', $data);
+    }
+    
+    public function get_userbyid($id)
+    {
+        $this->db->where('id_admin', $id);
+        return $this->db->get('tb_admin')->row_array();
     }
 }

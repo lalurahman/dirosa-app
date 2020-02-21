@@ -112,7 +112,7 @@
 
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <button class="btn waves-effect waves-light center" type="submit">Update Data
+                    <button class="btn waves-effect waves-light center green" type="submit">Ubah Profil
                     </button>
                 </div>
             </div>

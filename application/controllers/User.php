@@ -155,4 +155,17 @@ class User extends CI_Controller
             }
         }
     }
+
+public function detailuser($id)
+{
+    
+    $data['title'] = 'Detail Tugas - DirosApp';
+
+    $data['user'] = $this->user_model->get_userbyid($id);
+
+    $data['content'] = 'admin/user/detail_user';
+
+    $this->load->view('admin/index', $data);
+}
+
 }

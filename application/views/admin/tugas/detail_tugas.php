@@ -80,7 +80,7 @@
             </div>
 
             <div class="input-field col s12">
-              Diperiksa Oleh : <?= $detail_tugas['nama_ustadz']  ?>
+              Diperiksa Oleh : Ust. <?= $detail_tugas['nama_ustadz']  ?>
 
             </div>
 
@@ -108,7 +108,7 @@
             </div>
 
             <div class="input-field col s12">
-              Diperiksa Oleh : <?= $detail_tugas['nama_ustadz']  ?>
+              Diperiksa Oleh : Ust. <?= $detail_tugas['nama_ustadz']  ?>
 
             </div>
           <?php else : ?>

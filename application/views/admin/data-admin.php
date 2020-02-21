@@ -40,8 +40,8 @@
                         <td><?= $admin->nama ?></td>
                         <td><?= $admin->email ?></td>
                         <td>
-                            <a href="<?= base_url('admin/hapusadmin/'); ?><?= $admin->id_admin; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
-                            <a href="<?= base_url('admin/editadmin/'); ?><?= $admin->id_admin; ?>" class="waves-effect waves-light btn-small green-text"><i class="material-icons left">edit</i></a>
+                            <a href="<?= base_url('admin/detailuser/'); ?><?=  $admin->id_admin ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
+                            <a href="<?= base_url('admin/hapusAdmin/'); ?><?= $admin->id_admin ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
                         </td>
                     </tr>
 

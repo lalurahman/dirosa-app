@@ -5903,10 +5903,11 @@ li.home:before {
 	position: relative;
 	display: inline-block;
 	line-height: 50px;
-	width: 28px;
+	width: 40px;
 	white-space: nowrap;
 	border-radius: 1000px;
 	vertical-align: bottom;
+	margin-top: 5px !important;
 }
 
 .avatar-status i {

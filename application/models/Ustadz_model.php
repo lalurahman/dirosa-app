@@ -57,7 +57,7 @@ class Ustadz_model extends CI_Model
         $this->db->where('email', $data['email']);
         $this->db->update('tb_ustadz', $data);
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your profile has been updated!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Profil berhasil diubah</div>');
         redirect('user/profile');
     }
 
@@ -65,5 +65,12 @@ class Ustadz_model extends CI_Model
     {
         $this->db->where('id_ustadz', $data['id_ustadz']);
         $this->db->delete('tb_ustadz', $data);
+    }
+
+    
+    public function get_userbyid($id)
+    {
+        $this->db->where('id_ustadz', $id);
+        return $this->db->get('tb_ustadz')->row_array();
     }
 }

@@ -41,8 +41,8 @@
                         <td><?= $pengguna->nama ?></td>
                         <td><?= $pengguna->email ?></td>
                         <td>
-                            <a href="<?= base_url('user/hapususer/'); ?><?= $pengguna->id_user; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
-                            <a href="<?= base_url('user/edituser/'); ?><?= $pengguna->id_user; ?>" class="waves-effect waves-light btn-small green-text"><i class="material-icons left">edit</i></a>
+                            <a href="<?= base_url('user/detailuser/'); ?><?=  $pengguna->id_user ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
+                            <a href="<?= base_url('user/hapusUser/'); ?><?= $pengguna->id_user; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
                         </td>
                     </tr>
 

@@ -67,5 +67,19 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Dihapus!</div>');
         redirect('admin/dataadmin');
     }
+
+    
+public function detailuser($id)
+{
+    
+    $data['title'] = 'Detail Tugas - DirosApp';
+
+    $data['user'] = $this->admin_model->get_userbyid($id);
+
+    $data['content'] = 'admin/detail_user';
+
+    $this->load->view('admin/index', $data);
+}
+
     
 }

@@ -157,3 +157,13 @@
 #alert_close {
 	cursor: pointer;
 }
+
+.center-cropped {
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+}
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}

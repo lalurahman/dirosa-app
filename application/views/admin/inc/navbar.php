@@ -19,7 +19,7 @@
                      <li style="margin-right: 20px;">
                          <a href="javascript:void(0);" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
                              <span class="avatar-status avatar-online">
-                                 <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="avatar">
+                                 <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="avatar" class=" rounded-circle center-cropped" style="width: 40px; height: 40px; margin-top: 5px">
                                  <i></i>
                              </span>
                          </a>

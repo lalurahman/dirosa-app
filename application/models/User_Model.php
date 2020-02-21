@@ -61,7 +61,7 @@ class User_model extends CI_Model
         $upload_image = $_FILES['foto']['name'];
 
         if ($upload_image) {
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['allowed_types'] = 'gif|jpg|jpeg|png';
             $config['max_size']      = '5048';
             $config['upload_path'] = './assets/img/users/';
 
@@ -83,7 +83,14 @@ class User_model extends CI_Model
         $this->db->where('email', $data['email']);
         $this->db->update('tb_user', $data);
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your profile has been updated!</div>');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Profil berhasil diubah</div>');
         redirect('user/profile');
+    }
+    
+
+    public function get_userbyid($id)
+    {
+        $this->db->where('id_user', $id);
+        return $this->db->get('tb_user')->row_array();
     }
 }
