@@ -24,10 +24,11 @@
     <!--breadcrumbs end-->
     <!--start container-->
     <div class="container">
-        <form class="col s12" method="post" action="<?= base_url('materi/tambahmateri') ?>">
+        <form class="col s12" method="post" action="<?= base_url('materi/editmateri/') . $materi->id_materi ?>">
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <input id="pertemuan" name="pertemuan" type="text">
+                    <input id="id_materi" name="id_materi" value="<?= $materi->id_materi ?>" type="text" hidden>
+                    <input id="pertemuan" name="pertemuan" value="<?= $materi['pertemuan'] ?>" type="text">
                     <label for="pertemuan">Pertemuan</label>
                     <?= form_error('pertemuan', '<small class="text-danger pl-3">', '</small>') ?>
                 </div>

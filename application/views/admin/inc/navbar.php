@@ -19,7 +19,7 @@
                      <li style="margin-right: 20px;">
                          <a href="javascript:void(0);" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
                              <span class="avatar-status avatar-online">
-                                 <img src="<?= base_url('assets/img/users/').$user['foto'] ?>" alt="avatar" class=" rounded-circle center-cropped" style="width: 40px; height: 40px; margin-top: 5px">
+                                 <img width="20" src="<?= base_url('assets/img/users/') . $user['foto'] ?>" alt="avatar" class=" rounded-circle center-cropped" style="width: 40px; height: 40px; margin-top: 5px">
                                  <i></i>
                              </span>
                          </a>
@@ -29,7 +29,7 @@
                  <!-- translation-button -->
 
                  <!-- notifications-dropdown -->
-                
+
                  <!-- profile-dropdown -->
                  <ul id="profile-dropdown" class="dropdown-content">
                      <li>
@@ -38,7 +38,7 @@
                      </li>
 
                      <li>
-                         <a href="<?= base_url('auth/logout') ?>" class="grey-text text-darken-1"  onclick="return confirm('Yakin ingin keluar ? ');">
+                         <a href="<?= base_url('auth/logout') ?>" class="grey-text text-darken-1" onclick="return confirm('Yakin ingin keluar ? ');">
                              <i class="material-icons">keyboard_tab</i> Logout</a>
                      </li>
                  </ul>

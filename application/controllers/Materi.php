@@ -43,7 +43,7 @@ class Materi extends CI_Controller
         }
     }
 
-    public function editMateri()
+    public function editMateri($id_materi)
     {
         $this->form_validation->set_rules('pertemuan', 'Pertemuan', 'trim|required');
         $this->form_validation->set_rules('penjelasan_pertemuan', 'Penjelasan Pertemuan', 'trim|required');
@@ -51,13 +51,14 @@ class Materi extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Edit Materi - DirosApp';
-            $data['materi'] = $this->db->get('tb_materi')->result();
-            $data['content'] = 'admin/materi/tambah';
+            // $data['materi'] = $this->db->get('tb_materi')->row();
+            $data['content'] = 'admin/materi/edit-materi';
+            $data['materi'] = $this->db->get_where('tb_materi', ['id_materi' => $id_materi])->row();
             $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
             login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);
         } else {
-            $this->materi_model->tambah_materi();
+            $this->materi_model->edit_materi();
             redirect('materi');
         }
     }

@@ -7,7 +7,7 @@
                 <div class="card-image waves-effect waves-block waves-light blue lighten-1">
                 </div>
                 <div class="card-content">
-                    <img src="<?= base_url('assets/img/users/') . $user['foto'] ?>" alt="" class="responsive-img activator card-profile-image white  z-depth-2 rounded-circle center-cropped" style="width: 65px; height: 65px;">
+                    <img src="<?= base_url('assets/img/users/') . $user['foto'] ?>" alt="" class="responsive-img activator card-profile-image white  z-depth-2 rounded-circle center-cropped" style="width: 60px; height: 60px;">
 
 
                     <a class="btn-floating activator btn-move-up waves-effect waves-light red accent-2 z-depth-4 right" href="<?= base_url('user/editprofile/') ?>">

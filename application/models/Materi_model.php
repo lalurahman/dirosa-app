@@ -46,4 +46,10 @@ class Materi_model extends CI_Model
         $this->db->where('id_materi', $id_materi);
         return $this->db->get('tb_tugas')->row_array();
     }
+
+    public function edit_materi($where, $data, $table)
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
+    }
 }

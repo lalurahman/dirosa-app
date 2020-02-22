@@ -102,6 +102,23 @@
         </div>
     </div>
 
+    <!--Parallax-->
+    <div class="section">
+        <div class="parallax-container">
+            <div class="parallax"><img src="<?= base_url('assets/template/') ?>img/quran2.jpg">
+            </div>
+            <div class="row">
+                <div class="col s12 m6 offset-m3 center">
+                    <h5 class="center white-text mb-9">Saat ini belajar dirosa menjadi sangat mudah, dengan adanya aplikasi berbasis progressive web apps (PWA) belajar dapat dilakukan hanya dalam genggaman. berikut cara memasang aplikasi dirosa ke dalam smartphone :</h5>
+                </div>
+            </div>
+
+            <div class="row center mt-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_ZGOEFtai7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     </div>
     <footer id="contact" class="page-footer default_color scrollspy">
 
