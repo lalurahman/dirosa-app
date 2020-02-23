@@ -47,13 +47,13 @@ class Materi extends CI_Controller
     {
         $this->form_validation->set_rules('pertemuan', 'Pertemuan', 'trim|required');
         $this->form_validation->set_rules('penjelasan_pertemuan', 'Penjelasan Pertemuan', 'trim|required');
-
-
+        
+        
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Edit Materi - DirosApp';
             // $data['materi'] = $this->db->get('tb_materi')->row();
             $data['content'] = 'admin/materi/edit-materi';
-            $data['materi'] = $this->db->get_where('tb_materi', ['id_materi' => $id_materi])->row();
+            $data['materi'] = $this->materi_model->get_materi_byid($id_materi);
             $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
             login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);

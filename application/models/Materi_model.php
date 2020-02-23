@@ -20,6 +20,11 @@ class Materi_model extends CI_Model
         $this->db->where('id_materi', $id);
         return $this->db->get('tb_materi')->result();
     }
+    public function get_materi_byid($id)
+    {
+        $this->db->where('id_materi', $id);
+        return $this->db->get('tb_materi')->row_array();
+    }
 
     public function tambah_materi()
     {
@@ -47,9 +52,17 @@ class Materi_model extends CI_Model
         return $this->db->get('tb_tugas')->row_array();
     }
 
-    public function edit_materi($where, $data, $table)
+    public function edit_materi()
     {
-        $this->db->where($where);
-        $this->db->update($table, $data);
+        $data = [
+            'pertemuan' => htmlspecialchars($this->input->post('pertemuan')),
+            'penjelasan_pertemuan' => htmlspecialchars($this->input->post('penjelasan_pertemuan')),
+            'link_video' => htmlspecialchars($this->input->post('link_video'))
+        ];
+        
+        $this->db->where('id_materi', $this->input->post('id_materi'));
+        $this->db->update('tb_materi', $data);
+        
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Materi berhasil diubah</div>');
     }
 }

@@ -24,10 +24,10 @@
     <!--breadcrumbs end-->
     <!--start container-->
     <div class="container">
-        <form class="col s12" method="post" action="<?= base_url('materi/editmateri/') . $materi->id_materi ?>">
+        <form class="col s12" method="post" action="<?= base_url('materi/editmateri/').$materi['id_materi']  ?>">
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <input id="id_materi" name="id_materi" value="<?= $materi->id_materi ?>" type="text" hidden>
+                    <input id="id_materi" name="id_materi" value="<?= $materi['id_materi'] ?>" type="hidden" >
                     <input id="pertemuan" name="pertemuan" value="<?= $materi['pertemuan'] ?>" type="text">
                     <label for="pertemuan">Pertemuan</label>
                     <?= form_error('pertemuan', '<small class="text-danger pl-3">', '</small>') ?>
@@ -35,7 +35,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <textarea id="textarea1" name="penjelasan_pertemuan" class="materialize-textarea"></textarea>
+                    <textarea id="textarea1" name="penjelasan_pertemuan" class="materialize-textarea"><?= $materi['penjelasan_pertemuan'] ?></textarea>
                     <label for="textarea1">Penjelasan Pertemuan</label>
                     <?= form_error('penjelasan_pertemuan', '<small class="text-danger pl-3">', '</small>') ?>
                 </div>
@@ -44,7 +44,7 @@
 
             <div class="row">
                 <div class="input-field col s8 offset-s1">
-                    <input id="link_video" name="link_video" type="text">
+                    <input id="link_video" name="link_video" type="text" value="<?= $materi['link_video']; ?>">
                     <label for="link_video">Link video</label>
                     <?= form_error('link_video', '<small class="text-danger pl-3">', '</small>') ?>
                 </div>
@@ -54,7 +54,7 @@
 
                 <div class="row">
                     <div class="input-field col s8 offset-s1">
-                        <button class="btn waves-effect waves-light center" type="submit">Tambah Data
+                        <button class="btn waves-effect waves-light center" type="submit">Ubah Data
                         </button>
                     </div>
                 </div>
