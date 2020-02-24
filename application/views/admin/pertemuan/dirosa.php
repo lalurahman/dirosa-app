@@ -571,7 +571,7 @@
                             <div class="input-field col s12 m12">
                                 <div class="file-field input-field">
                                     <div class="btn">
-                                        <span>Berkas</span>
+                                        <span>Audio</span>
                                         <input type="file" name="berkas" accept="audio/*">
                                     </div>
                                     <div class="file-path-wrapper">
@@ -595,7 +595,7 @@
                             <div class="input-field col s12 m12">
                                 <div class="file-field input-field">
                                     <div class="btn">
-                                        <span>Berkas</span>
+                                        <span>Audio</span>
                                         <input type="file" name="berkas" accept="audio/*">
                                     </div>
                                     <div class="file-path-wrapper">
