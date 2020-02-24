@@ -16,7 +16,7 @@
                         <?php if ($progress_belajar_aktiv == 1) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa01.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa01.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 1 bagian 1</p>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa01b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa01b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 1 bagian 2</p>
@@ -39,7 +39,7 @@
                         <?php elseif ($progress_belajar_aktiv == 2) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa02.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa02.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 2 bagian 1</p>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa02b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa02b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 2 bagian 2</p>
@@ -62,7 +62,7 @@
                         <?php elseif ($progress_belajar_aktiv == 3) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa03.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa03.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 3 bagian 1</p>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa03b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa03b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 3 bagian 2</p>
@@ -85,7 +85,7 @@
                         <?php elseif ($progress_belajar_aktiv == 4) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 4 bagian 1</p>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 4 bagian 2</p>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04c.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04c.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 4 bagian 3</p>
@@ -118,7 +118,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04d.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa04d.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 4 bagian 4</p>
@@ -130,7 +130,7 @@
                         <?php elseif ($progress_belajar_aktiv == 5) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa05.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa05.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 5 bagian 1</p>
@@ -141,7 +141,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa05b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa05b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 5 bagian 2</p>
@@ -153,7 +153,7 @@
                         <?php elseif ($progress_belajar_aktiv == 6) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa06.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa06.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 6 bagian 1</p>
@@ -164,7 +164,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa06b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa06b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 6 bagian 2</p>
@@ -176,7 +176,7 @@
                         <?php elseif ($progress_belajar_aktiv == 7) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa07.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa07.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 7 bagian 1</p>
@@ -187,7 +187,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa07b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa07b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 7 bagian 2</p>
@@ -199,7 +199,7 @@
                         <?php elseif ($progress_belajar_aktiv == 8) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa08.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa08.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 8 bagian 1</p>
@@ -210,7 +210,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa08b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa08b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 8 bagian 2</p>
@@ -222,7 +222,7 @@
                         <?php elseif ($progress_belajar_aktiv == 9) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa09.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa09.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 9 bagian 1</p>
@@ -233,7 +233,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa09b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa09b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 9 bagian 2</p>
@@ -245,7 +245,7 @@
                         <?php elseif ($progress_belajar_aktiv == 10) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 10 bagian 1</p>
@@ -256,7 +256,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 10 bagian 2</p>
@@ -267,7 +267,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10c.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10c.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 10 bagian 3</p>
@@ -278,7 +278,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10d.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10d.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 10 bagian 4</p>
@@ -289,7 +289,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10e.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa10e.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 10 bagian 5</p>
@@ -301,7 +301,7 @@
                         <?php elseif ($progress_belajar_aktiv == 11) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa11.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa11.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 11 bagian 1</p>
@@ -312,7 +312,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa11b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa11b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 11 bagian 2</p>
@@ -323,7 +323,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa11c.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa11c.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 11 bagian 3</p>
@@ -335,7 +335,7 @@
                         <?php elseif ($progress_belajar_aktiv == 12) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa12.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa12.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 12 bagian 1</p>
@@ -346,7 +346,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa12b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa12b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 12 bagian 2</p>
@@ -358,7 +358,7 @@
                         <?php elseif ($progress_belajar_aktiv == 13) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa13.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa13.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 13 bagian 1</p>
@@ -369,7 +369,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa13b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa13b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 13 bagian 2</p>
@@ -381,7 +381,7 @@
                         <?php elseif ($progress_belajar_aktiv == 14) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa14.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa14.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 14 bagian 1</p>
@@ -392,7 +392,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa14b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa14b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 14 bagian 2</p>
@@ -404,7 +404,7 @@
                         <?php elseif ($progress_belajar_aktiv == 15) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa15.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa15.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 15 bagian 1</p>
@@ -415,7 +415,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa15b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa15b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 15 bagian 2</p>
@@ -427,7 +427,7 @@
                         <?php elseif ($progress_belajar_aktiv == 16) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa16.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa16.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 16 bagian 1</p>
@@ -438,7 +438,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa16b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa16b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 16 bagian 2</p>
@@ -449,7 +449,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa16c.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa16c.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 16 bagian 3</p>
@@ -461,7 +461,7 @@
                         <?php elseif ($progress_belajar_aktiv == 17) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa17.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa17.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 17 bagian 1</p>
@@ -472,7 +472,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa17b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa17b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 17 bagian 2</p>
@@ -483,7 +483,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa17c.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa17c.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 17 bagian 3</p>
@@ -495,7 +495,7 @@
                         <?php elseif ($progress_belajar_aktiv == 18) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa18.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa18.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 18 bagian 1</p>
@@ -506,7 +506,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa18b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa18b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 18 bagian 2</p>
@@ -518,7 +518,7 @@
                         <?php elseif ($progress_belajar_aktiv == 19) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa19.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa19.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 19 bagian 1</p>
@@ -529,7 +529,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa19b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa19b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 19 bagian 2</p>
@@ -541,7 +541,7 @@
                         <?php elseif ($progress_belajar_aktiv == 20) : ?>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa20.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa20.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 20 bagian 1</p>
@@ -552,7 +552,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s12 m6">
-                                    <img class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa20b.jpg') ?>" width="100%">
+                                    <img data-caption="Tap/Sentuh Untuk Kembali" class="materialboxed mb-2" src="<?= base_url('assets/img/dirosa/Dirosa20b.jpg') ?>" width="100%">
                                 </div>
                                 <div class="col s12 m6">
                                     <p class="center">Audio Pertemuan 20 bagian 2</p>
@@ -572,7 +572,7 @@
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Berkas</span>
-                                        <input type="file" name="berkas" accept="doc/docx/pdf">
+                                        <input type="file" name="berkas" accept="audio/*">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
@@ -596,7 +596,7 @@
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Berkas</span>
-                                        <input type="file" name="berkas" accept="mp3">
+                                        <input type="file" name="berkas" accept="audio/*">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
