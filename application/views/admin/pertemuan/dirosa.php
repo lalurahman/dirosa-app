@@ -571,8 +571,8 @@
                             <div class="input-field col s12 m12">
                                 <div class="file-field input-field">
                                     <div class="btn">
-                                        <span>Berkas</span>
-                                        <input type="file" name="berkas" accept="doc/docx/pdf">
+                                        <span>Audio</span>
+                                        <input type="file" name="berkas" accept="mp3|wma|aac|wav|flac|mp4|pcm">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
@@ -595,8 +595,8 @@
                             <div class="input-field col s12 m12">
                                 <div class="file-field input-field">
                                     <div class="btn">
-                                        <span>Berkas</span>
-                                        <input type="file" name="berkas" accept="mp3">
+                                        <span>Audio</span>
+                                        <input type="file" name="berkas" accept="mp3|wma|aac|wav|flac|mp4|pcm">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
