@@ -26,12 +26,12 @@ class Tugas extends CI_Controller
         $this->form_validation->set_rules('nama_berkas', 'Nama Berkas', 'required');
 
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+        $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
         if ($this->form_validation->run() == false) {
-            $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">File tugas belum dipilih!</div>');
             redirect('materi/pertemuan/'.$data['progress_belajar']['id_materi']);
         } else {
-            $this->tugas_model->tambahTugas();
+            $this->tugas_model->tambahTugas(); 
             redirect('materi/pertemuan/'.$data['progress_belajar']['id_materi']);
         }
         

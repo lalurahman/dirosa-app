@@ -47,6 +47,7 @@ class Materi_model extends CI_Model
 
     public function cek_tugas($id_user, $id_materi)
     {
+        $this->db->order_by('id_tugas', 'DESC');
         $this->db->where('id_user', $id_user);
         $this->db->where('id_materi', $id_materi);
         return $this->db->get('tb_tugas')->row_array();

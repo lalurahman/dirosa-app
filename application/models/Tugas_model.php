@@ -115,6 +115,6 @@ class Tugas_model extends CI_Model
         $this->db->insert('tb_tugas', $data);
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tugas Berhasil Dikirim</div>');
-        redirect('materi/pertemuan/1');
+        // redirect('materi/pertemuan/1');
     }
 }
