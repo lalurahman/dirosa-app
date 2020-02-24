@@ -97,7 +97,7 @@ class Tugas_model extends CI_Model
         $upload_image = $_FILES['berkas']['name'];
 
         if ($upload_image) {
-            $config['allowed_types']        = 'mp3';
+            $config['allowed_types']        = 'm4a|mp3';
             $config['max_size']             = 10140;
             $config['upload_path']          = './assets/tugas/';
 
