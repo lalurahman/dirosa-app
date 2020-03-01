@@ -42,7 +42,7 @@
                         <td><?= $tugas['nama_user'] ?></td>
                         <td><?= $tugas['pertemuan'] ?></td>
                         <td><?= $tugas['status'] ?></td>
-                        <td><?= date('d-m-Y', strtotime($user['date_created']));  ?></td>
+                        <td><?= date('d-m-Y', strtotime($tugas['date_created']));  ?></td>
                         <td>
                             <a href="<?= base_url('tugas/detailtugas/' . $tugas['id_tugas']); ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
                         </td>
