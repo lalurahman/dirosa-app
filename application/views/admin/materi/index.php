@@ -30,7 +30,6 @@
                 <tr>
                     <th>Pertemuan</th>
                     <th>Penjelasan Pertemuan</th>
-                     <!--<th>Link Video</th>-->
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -39,7 +38,6 @@
                     <tr>
                         <td><?= $materi->pertemuan ?></td>
                         <td><?= $materi->penjelasan_pertemuan ?></td>
-                        <!--<td><?= $materi->link_video ?></td>-->
                         <td>
                             <a href="<?= base_url('materi/editmateri/'); ?><?= $materi->id_materi; ?>" class="waves-effect waves-light btn-small green-text"><i class="material-icons left">edit</i></a>
                         </td>

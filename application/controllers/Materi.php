@@ -8,6 +8,8 @@ class Materi extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('materi_model');
+        $this->load->model('kelas_model');
+        $this->load->model('ustadz_model');
 
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
     }
@@ -67,12 +69,17 @@ class Materi extends CI_Controller
     public function pertemuan($i)
     {
         if ($this->session->userdata('role_id')) {
-            $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+        $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
+        $data['kelas2'] = $this->materi_model->ustadz($data['user']['id_user']); 
             $data['progress_belajar'] = $this->materi_model->get_progress_belajar($data['user']['id_user']);
             if ($i > $data['progress_belajar']['id_materi']) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Selesaikan Dulu Pertemuan Ini</div>');
                 redirect('materi/pertemuan/' . $data['progress_belajar']['id_materi']);
             }
+
+            
+            $data['kelas'] = $this->kelas_model->getKelasById($data['user']['id_user']);
+            $data['ustadz'] = $this->ustadz_model->getUstadz();
 
             $data['title'] = 'Pertemuan';
             $data['materi'] = $this->materi_model->get_materi($i);

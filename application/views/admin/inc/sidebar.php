@@ -71,6 +71,13 @@
                             <span class="nav-text">Data Materi</span>
                         </a>
                     </li>
+
+                    <li class="bold">
+                        <a href="<?= base_url('kelas') ?>" class="waves-effect waves-cyan">
+                            <i class="material-icons">folder_shared</i>
+                            <span class="nav-text">Data Kelas</span>
+                        </a>
+                    </li>
                 <?php endif; ?>
 
 

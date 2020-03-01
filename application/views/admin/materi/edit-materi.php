@@ -8,7 +8,7 @@
                 <div class="col s10 m6 l6">
                     <h5 class="breadcrumbs-title"></h5>
                     <ol class="breadcrumbs pt-4">
-                        <h5>Tambah Data Materi</h5>
+                        <h5>Edit Data Materi</h5>
 
                     </ol>
                 </div>

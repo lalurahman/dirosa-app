@@ -5,7 +5,8 @@ class Ustadz_model extends CI_Model
 
     public function getUstadz()
     {
-        return $this->db->get('tb_ustadz')->result();
+        $this->db->order_by('id_ustadz', 'DESC');
+        return $this->db->get('tb_ustadz')->result_array();
     }
 
     public function tambah_ustadz()
@@ -72,5 +73,28 @@ class Ustadz_model extends CI_Model
     {
         $this->db->where('id_ustadz', $id);
         return $this->db->get('tb_ustadz')->row_array();
+    }
+    
+    public function jumlah_ustadz()
+    {
+        return $this->db->get('tb_ustadz')->num_rows();
+    }
+
+    public function ustadz_terakhir()
+    {
+        $this->db->order_by('id_ustadz', 'DESC');
+        return $this->db->get('tb_ustadz')->row_array();
+    }
+
+    public function ustadz_terakhir_pengguna()
+    {
+        $this->db->order_by('id_progress_belajar', 'DESC');
+        return $this->db->get('tb_progress_belajar')->row_array();
+    }
+    
+    public function jumlah_pengguna($id)
+    {
+        $this->db->where('id_ustadz', $id);
+        return $this->db->get('tb_progress_belajar')->num_rows();
     }
 }

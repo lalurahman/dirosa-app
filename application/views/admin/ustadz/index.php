@@ -27,7 +27,7 @@
     <!--breadcrumbs end-->
     <!--start container-->
     <div class="container">
-        <table class="bordered striped">
+        <table class="bordered striped highlight">
             <thead>
                 <tr>
                     <th data-field="id">Nama Ustadz</th>
@@ -35,19 +35,19 @@
                     <th data-field="price">Aksi</th>
                 </tr>
             </thead>
-            <?php foreach ($ustadz as $ustadz) : ?>
-                <tbody>
+            <tbody>
+                <?php foreach ($ustadz as $ustadz) : ?>
                     <tr>
-                        <td><?= $ustadz->nama ?></td>
-                        <td><?= $ustadz->email ?></td>
+                        <td><?= $ustadz['nama'] ?></td>
+                        <td><?= $ustadz['email'] ?></td>
                         <td>
-                            <a href="<?= base_url('ustadz/detailuser/'); ?><?=  $ustadz->id_ustadz ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
-                            <a href="<?= base_url('ustadz/hapusUstadz/'); ?><?= $ustadz->id_ustadz; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
+                            <a href="<?= base_url('ustadz/detailuser/'); ?><?=  $ustadz['id_ustadz'] ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
+                            <a href="<?= base_url('ustadz/hapusUstadz/'); ?><?= $ustadz['id_ustadz']; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
 
                 </tbody>
-            <?php endforeach; ?>
         </table>
     </div>
 </section>

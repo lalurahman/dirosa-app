@@ -26,7 +26,7 @@
     <!--breadcrumbs end-->
     <!--start container-->
     <div class="container">
-        <table class="bordered striped">
+        <table class="bordered striped highlight">
             <thead>
                 <tr>
                     <th>Nama Pengguna</th>
@@ -34,8 +34,8 @@
                     <th>Aksi</th>
                 </tr>
             </thead>
-            <?php foreach ($admin as $admin) : ?>
-                <tbody>
+            <tbody>
+                <?php foreach ($admin as $admin) : ?>
                     <tr>
                         <td><?= $admin->nama ?></td>
                         <td><?= $admin->email ?></td>
@@ -45,8 +45,8 @@
                         </td>
                     </tr>
 
+                    <?php endforeach; ?>
                 </tbody>
-            <?php endforeach; ?>
         </table>
     </div>
 </section>

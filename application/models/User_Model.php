@@ -2,7 +2,13 @@
 class User_model extends CI_Model
 {
 
-    public function tambah_user()
+    public function getUser()
+    {
+        $this->db->order_by('id_user', 'DESC');
+        return $this->db->get('tb_user')->result();
+    }
+
+    public function tambah_user($cek_ustadz)
     {
 
         $data = [
@@ -20,10 +26,7 @@ class User_model extends CI_Model
             // 'date_created' => time("Y/m/d H:iP")
         ];
         $this->db->insert('tb_user', $data);
-
-
-
-
+        
         $this->db->order_by('id_user', 'DESC');
         $id_user = $this->db->get('tb_user')->row_array();
 
