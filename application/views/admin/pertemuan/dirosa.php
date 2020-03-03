@@ -563,8 +563,36 @@
                             </div>
                         <?php endif; ?>
 
-                        <?php if ($cek_tugas && $cek_tugas['status'] == 'Belum Diperiksa') : ?>
-                            <p>Tugas anda sedang diproses!</a></p>
+                        
+                        <?php if ($kelas2['id_ustadz'] == 0): ?>
+                            <p>Belum pilih ustadz</a></p>
+                            
+        <form class="col s12" method="post" action="<?= base_url('kelas/ubah2/').$materi->id_materi  ?>">
+                            <div class="row">
+                    <input id="id_progress_belajar" name="id_progress_belajar" value="<?= $kelas['id_progress_belajar'] ?>" type="hidden" >
+                <div class="input-field col s8 offset-s1">
+                    <select name="nama_ustadz" onchange="document.getElementById('id_ustadz').value =  (this.options[this.selectedIndex].getAttribute('idustadz') );">
+                        <option idustadz="" value="" disabled selected>Pilih Ustadz</option>
+                        <?php foreach ($ustadz as $row): ?>
+                        <option value="<?= $row['nama']; ?>"  idustadz="<?= $row['id_ustadz']; ?>"  <?php if ($row['id_ustadz']  == $kelas['id_ustadz']) echo "selected"; ?>>Ust. <?= $row['nama']; ?></option>
+                        <?php endforeach; ?>
+                        <br>
+                        
+                      </select>
+                      <label>Pilih ustadz</label>
+                      <?= form_error('jk', '<small class="red-text">', '</small>') ?>
+                    </div>
+                  </div>
+                  <input class="form-control form-control-sm" type="hidden" name="id_ustadz" id="id_ustadz" > 
+                  <div class="row">
+                    <div class="input-field col s8 offset-s1">
+                        <button class="btn waves-effect waves-light center" type="submit">Kirim
+                        </button>
+                    </div>
+                </div>
+                        <?php else: ?>
+                            <?php if ($cek_tugas && $cek_tugas['status'] == 'Belum Diperiksa') : ?>
+                            <p>Tugas anda sedang diproses!</p>
                         <?php elseif ($cek_tugas['status'] == 'Belum Lulus') : ?>
                             <p>Silahkan kirim file rekaman hasil belajar anda pada pertemuan ini!</p>
                             <?php echo form_open_multipart('tugas/tambahTugas') ?>
@@ -587,6 +615,7 @@
                                 </button>
                                 </form>
                             </div>
+
                         <?php elseif ($cek_tugas['status'] == 'Lulus') : ?>
                             <p>Anda Telah Lulus di pertemuan ini, Silahkan lanjut belajar!</p>
                         <?php else : ?>
@@ -602,11 +631,11 @@
                                         <input class="file-path validate" name="nama_berkas" type="text" value="">
                                     </div>
                                 </div>
-
                             </div>
                             <?= form_error('nama_berkas', '<small class="red-text">', '</small>') ?>
                             <input type="hidden" name="id_materi" value="<?= $materi->id_materi ?>">
                             <input type="hidden" name="id_user" value="<?= $user['id_user'] ?>">
+                            <input type="hidden" name="id_ustadz" value="<?= $kelas['id_ustadz'] ?>">
                             <div class="col s12 m12 mb-8">
                                 <button class="btn waves-effect waves-light green accent-4" type="submit" name="btn_edit">Kirim
                                     <i class="material-icons right">send</i>
@@ -614,6 +643,9 @@
                                 </form>
                             </div>
                         <?php endif; ?>
+                        <?php endif; ?>
+
+                        
                     </div>
 
                 </div>

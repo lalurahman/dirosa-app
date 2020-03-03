@@ -13,7 +13,7 @@ class Ustadz extends CI_Controller
     public function index()
     {
         $data['title'] = 'Data Ustadz - DirosApp';
-        $data['ustadz'] = $this->db->get('tb_ustadz')->result();
+        $data['ustadz'] = $this->ustadz_model->getUstadz(); 
 
         $data['content'] = 'admin/ustadz/index';
 

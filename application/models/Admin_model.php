@@ -3,6 +3,13 @@
 class Admin_model extends CI_Model
 {
 
+    
+    public function getAdmin()
+    {
+        $this->db->order_by('id_admin', 'DESC');
+        return $this->db->get('tb_admin')->result();
+    }
+
     public function tambah_admin()
     {
         $data = [

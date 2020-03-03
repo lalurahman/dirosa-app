@@ -10,7 +10,7 @@
                 <div class="col s10 m6 l6">
                     <h5 class="breadcrumbs-title"></h5>
                     <ol class="breadcrumbs pt-4">
-                        <h5>Data Pengguna</h5>
+                        <h5>Data Kelas</h5>
 
                     </ol>
                 </div>
@@ -31,23 +31,31 @@
             <thead>
                 <tr>
                     <th>Nama Pengguna</th>
-                    <th>Email</th>
+                    <th>Nama Ustadz</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($pengguna as $pengguna) : ?>
+              <?php foreach ($kelas as $row) : ?>
                     <tr>
-                        <td><?= $pengguna->nama ?></td>
-                        <td><?= $pengguna->email ?></td>
+                        <td><?= $row['nama_user'] ?></td>
+                        <td <?php if(!$row['nama_ustadz']){ echo "style='color:red'";} ?>>
+                          <?php
+                            if ($row['nama_ustadz']) {
+                              echo $row['nama_ustadz'] ;
+                            }else{
+                              echo "Belum ada";
+                            }
+                         ?>
+                         </td>
                         <td>
-                            <a href="<?= base_url('user/detailuser/'); ?><?=  $pengguna->id_user ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">remove_red_eye</i></a>
-                            <a href="<?= base_url('user/hapusUser/'); ?><?= $pengguna->id_user; ?>" class="waves-effect waves-light btn-small red-text" onclick="return confirm('Yakin ingin menghapus ? ');"><i class="material-icons left">delete</i></a>
+                            <a href="<?= base_url('kelas/ubah/'); ?><?=  $row['id_progress_belajar']; ?>" class="waves-effect waves-light btn-small blue-text"><i class="material-icons left">edit</i></a>
                         </td>
                     </tr>
 
                     <?php endforeach; ?>
                 </tbody>
         </table>
+        
     </div>
 </section>

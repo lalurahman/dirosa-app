@@ -65,7 +65,12 @@
           </div>
 
           <div class="input-field col s12">
-            Diperiksa Oleh : Ust. <?= $detail_tugas_user['nama_ustadz']  ?>
+            <?php if ($detail_tugas_user['penilaian'] == 0) {
+              echo "Belum Diperiksa";
+            }else{
+              echo "Diperiksa Oleh : Ust.". $detail_tugas_user['nama_ustadz'];
+            } ?>
+            
 
           </div>
 

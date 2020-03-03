@@ -9,6 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         is_logged_in();
         $this->load->model('admin_model');
+        $this->load->model('ustadz_model');
     }
 
     public function index()
@@ -27,7 +28,7 @@ class Admin extends CI_Controller
     {
             $data['title'] = 'Data Admin - DirosApp';
             $data['content'] = 'admin/data-admin';
-            $data['admin'] = $this->db->get('tb_admin')->result();
+            $data['admin'] =  $this->admin_model->getAdmin(); 
             $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email') );
             login_admin($data['user']['user_role']);
             $this->load->view('admin/index', $data);

@@ -21,7 +21,7 @@ class User extends CI_Controller
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
 
         $data['title'] = 'Data Pengguna - DirosApp';
-        $data['pengguna'] = $this->db->get('tb_user')->result();
+        $data['pengguna'] = $this->user_model->getUser(); 
         $data['content'] = 'admin/user/index';
         $this->load->view('admin/index', $data);
     }

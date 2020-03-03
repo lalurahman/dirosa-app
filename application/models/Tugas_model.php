@@ -16,6 +16,21 @@ class Tugas_model extends CI_Model
 
         return $this->db->get()->result_array();
     }
+    
+    public function getTugasByUstadz($id)
+    {
+        $this->db->select('
+        tb_user.nama as nama_user, tb_ustadz.id_ustadz AS nama_ustadz, tb_materi.*, tb_tugas.date_created, tb_tugas.status, tb_tugas.id_tugas
+        ');
+        $this->db->from('tb_tugas');
+        $this->db->join('tb_user', 'tb_user.id_user=tb_tugas.id_user', 'left');
+        $this->db->join('tb_ustadz', 'tb_ustadz.id_ustadz=tb_tugas.id_ustadz', 'left');
+        $this->db->join('tb_materi', 'tb_materi.id_materi=tb_tugas.id_materi', 'left');
+        $this->db->order_by('id_tugas', 'DESC');
+        $this->db->where('tb_tugas.id_ustadz', $id);
+        
+        return $this->db->get()->result_array();
+    }
 
     public function getTugasUser($id_user)
     {
@@ -88,7 +103,7 @@ class Tugas_model extends CI_Model
     {
         $data = [
             "id_user" =>   $this->input->post('id_user'),
-            "id_ustadz" => 0,
+            "id_ustadz" => $this->input->post('id_ustadz'),
             "penilaian" => 0,
             "komentar" => "-",
             "id_materi" => $this->input->post('id_materi'),

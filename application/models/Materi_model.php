@@ -53,6 +53,12 @@ class Materi_model extends CI_Model
         return $this->db->get('tb_tugas')->row_array();
     }
 
+    public function ustadz($id_user)
+    {
+        $this->db->where('id_user', $id_user);
+        return $this->db->get('tb_progress_belajar')->row_array();
+    }
+
     public function edit_materi()
     {
         $data = [
