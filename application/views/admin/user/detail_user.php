@@ -37,8 +37,12 @@
             <td><?= $user['jk'] ?></td>
           </tr>
           <tr>
-            <td>Tempat, Tanggal Lahir</td>
-            <td><?= $user['tempat_lahir'] . ', ' . date("d-m-Y", strtotime($user['tanggal_lahir'])) ?></td>
+            <td>Nomor Hp</td>
+            <td><?= $user['no_hp'] ?></td>
+          </tr>
+          <tr>
+            <td>Usia</td>
+            <td><?= $user['usia'] ?></td>
           </tr>
           <tr>
             <td>Alamat</td>

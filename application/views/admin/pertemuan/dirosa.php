@@ -9,8 +9,7 @@
                 <div class="card teal">
                     <div class="card-content white-text">
                         <span class="card-title"><?= $materi->pertemuan ?></span>
-                        <small class="black-text white">Sumber Video dari Youtube Channel: <a href="https://www.youtube.com/watch?v=F7BywK6mVLU&list=PLuIq4XhtbYD6tkPlN5qyaeaSW14ljqQKb" target="_blank" class="red-text">Al Kahfi Channel</a></small>
-                        <iframe src="<?= $materi->link_video ?>" width="100%" height="400px" frameborder="0" class="mb-2" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+                        
                         <p class="mb-2"><?= $materi->penjelasan_pertemuan ?></p>
 
                         <?php if ($progress_belajar_aktiv == 1) : ?>

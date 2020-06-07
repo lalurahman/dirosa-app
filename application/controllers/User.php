@@ -32,8 +32,8 @@ class User extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
         $this->form_validation->set_rules('jk', 'Jenis Kelamin', 'trim|required');
         $this->form_validation->set_rules('pekerjaan', 'Pekerjaan', 'trim|required');
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
-        $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+        $this->form_validation->set_rules('usia', 'Usia', 'trim|required');
+        $this->form_validation->set_rules('no_hp', 'Nomor Hp', 'trim|required');
         $this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
         $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
             'matches' => 'Password dont match',
@@ -111,8 +111,8 @@ class User extends CI_Controller
             $this->form_validation->set_rules('email', 'Email', 'trim|required');
             $this->form_validation->set_rules('jk', 'Jenis Kelamin', 'trim|required');
             $this->form_validation->set_rules('pekerjaan', 'Pekerjaan', 'trim|required');
-            $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
-            $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+            $this->form_validation->set_rules('no_hp', 'Nomor Hp', 'trim|required');
+            $this->form_validation->set_rules('usia', 'Usia', 'trim|required');
             $this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
 
             if ($this->form_validation->run() == false) {

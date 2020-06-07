@@ -42,16 +42,19 @@
                                         <label>Jenis Kelamin</label>
                                         <?= form_error('jk', '<small class="red-text">', '</small>') ?>
                                     </div>
+                                    
+                                    <div class="input-field col s12">
+                                        <input type="number" name="usia" id="usia" value="<?php echo set_value('usia'); ?>">
+                                        <label for="usia">Usia</label>
+                                        <?= form_error('usia', '<small class="red-text">', '</small>') ?>
 
-                                    <div class="input-field col s12 m7">
-                                        <input id="tempat_lahir" name="tempat_lahir" type="text" value="<?php echo set_value('tempat_lahir'); ?>">
-                                        <label for="tempat_lahir">Tempat Lahir</label>
-                                        <?= form_error('tempat_lahir', '<small class="red-text">', '</small>') ?>
                                     </div>
-                                    <div class="input col s12 m5">
-                                        <label for="tanggal_lahir">Tanggal Lahir</label>
-                                        <input id="tanggal_lahir" name="tanggal_lahir" type="date" class="" value="<?php echo set_value('tanggal_lahir'); ?>" autocomplete="off">
-                                        <?= form_error('tanggal_lahir', '<small class="red-text left">', '</small>'); ?>
+
+                                    <div class="input-field col s12">
+                                        <input type="number" name="no_hp" id="no_hp" value="<?php echo set_value('no_hp'); ?>">
+                                        <label for="no_hp">Nomor Hp</label>
+                                        <?= form_error('no_hp', '<small class="red-text">', '</small>') ?>
+
                                     </div>
 
                                     <div class="input-field col s12">

@@ -18,7 +18,8 @@
                         <p><i class="material-icons blue-text">work</i> <?= $user['pekerjaan'] ?> </p>
                         <p><i class="material-icons blue-text">email</i> <?= $user['email'] ?> </p>
                         <p><i class="material-icons blue-text">portrait</i> <?= $user['jk'] ?> </p>
-                        <p><i class="material-icons blue-text">date_range</i> <?= $user['tempat_lahir'] . ", " . date("d-m-Y", strtotime($user['tanggal_lahir'])); ?> </p>
+                        <p><i class="material-icons blue-text">date_range</i> <?= $user['usia']; ?> Tahun</p>
+                        <p><i class="material-icons blue-text">phone</i> <?= $user['no_hp']; ?> </p>
                         <p><i class="material-icons blue-text">pin_drop</i> <?= $user['alamat'] ?> </p>
                 </div>
             </div>

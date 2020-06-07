@@ -14,8 +14,8 @@ class User_model extends CI_Model
         $data = [
             'nama' => htmlspecialchars($this->input->post('nama')),
             'jk' => htmlspecialchars($this->input->post('jk')),
-            'tempat_lahir' => htmlspecialchars($this->input->post('tempat_lahir')),
-            'tanggal_lahir' => htmlspecialchars($this->input->post('tanggal_lahir')),
+            'usia' => htmlspecialchars($this->input->post('usia')),
+            'no_hp' => htmlspecialchars($this->input->post('no_hp')),
             'alamat' => htmlspecialchars(htmlspecialchars($this->input->post('alamat'))),
             'pekerjaan' => htmlspecialchars(htmlspecialchars($this->input->post('pekerjaan'))),
             'email' => htmlspecialchars($this->input->post('email')),
@@ -51,8 +51,8 @@ class User_model extends CI_Model
         $data = [
             'nama' => htmlspecialchars($this->input->post('nama')),
             'jk' => htmlspecialchars($this->input->post('jk')),
-            'tempat_lahir' => htmlspecialchars($this->input->post('tempat_lahir')),
-            'tanggal_lahir' => htmlspecialchars($this->input->post('tanggal_lahir')),
+            'usia' => htmlspecialchars($this->input->post('usia')),
+            'no_hp' => htmlspecialchars($this->input->post('no_hp')),
             'alamat' => htmlspecialchars(htmlspecialchars($this->input->post('alamat'))),
             'pekerjaan' => htmlspecialchars(htmlspecialchars($this->input->post('pekerjaan'))),
             'email' => htmlspecialchars($this->input->post('email'))

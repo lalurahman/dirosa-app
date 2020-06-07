@@ -57,17 +57,17 @@
 
         <div class="row">
             <div class="input-field col s8 offset-s1 ">
-                <input id="tempat_lahir" name="tempat_lahir" type="text" value="<?= $user['tempat_lahir']; ?>">
-                <label for="tempat_lahir">Tempat Lahir</label>
-                <?= form_error('tempat_lahir', '<small class="red-text">', '</small>') ?>
+                <input id="usia" name="usia" type="number" value="<?= $user['usia']; ?>">
+                <label for="usia">Usia</label>
+                <?= form_error('usia', '<small class="red-text">', '</small>') ?>
             </div>
         </div>
 
         <div class="row">
             <div class="input col s8 offset-s1 ">
-                <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input id="tanggal_lahir" name="tanggal_lahir" type="date" class="" value="<?= $user['tanggal_lahir']; ?>" autocomplete="off">
-                <?= form_error('tanggal_lahir', '<small class="red-text left">', '</small>'); ?>
+                <label for="no_hp">Nomor Hp</label>
+                <input id="no_hp" name="no_hp" type="number" class="" value="<?= $user['no_hp']; ?>" autocomplete="off">
+                <?= form_error('no_hp', '<small class="red-text left">', '</small>'); ?>
             </div>
         </div>
 
