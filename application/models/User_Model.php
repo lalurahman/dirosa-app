@@ -8,7 +8,7 @@ class User_model extends CI_Model
         return $this->db->get('tb_user')->result();
     }
 
-    public function tambah_user($cek_ustadz)
+    public function tambah_user()
     {
 
         $data = [
@@ -23,10 +23,9 @@ class User_model extends CI_Model
             'user_role' => 3,
             'is_active' => 1,
             'foto' => 'default.png'
-            // 'date_created' => time("Y/m/d H:iP")
         ];
         $this->db->insert('tb_user', $data);
-        
+
         $this->db->order_by('id_user', 'DESC');
         $id_user = $this->db->get('tb_user')->row_array();
 
@@ -89,7 +88,7 @@ class User_model extends CI_Model
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Profil berhasil diubah</div>');
         redirect('user/profile');
     }
-    
+
 
     public function get_userbyid($id)
     {

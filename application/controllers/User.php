@@ -21,7 +21,7 @@ class User extends CI_Controller
         $data['user'] = sesi($this->session->userdata('role_id'), $this->session->userdata('email'));
 
         $data['title'] = 'Data Pengguna - DirosApp';
-        $data['pengguna'] = $this->user_model->getUser(); 
+        $data['pengguna'] = $this->user_model->getUser();
         $data['content'] = 'admin/user/index';
         $this->load->view('admin/index', $data);
     }
@@ -156,16 +156,15 @@ class User extends CI_Controller
         }
     }
 
-public function detailuser($id)
-{
-    
-    $data['title'] = 'Detail Tugas - DirosApp';
+    public function detailuser($id)
+    {
 
-    $data['user'] = $this->user_model->get_userbyid($id);
+        $data['title'] = 'Detail Tugas - DirosApp';
 
-    $data['content'] = 'admin/user/detail_user';
+        $data['user'] = $this->user_model->get_userbyid($id);
 
-    $this->load->view('admin/index', $data);
-}
+        $data['content'] = 'admin/user/detail_user';
 
+        $this->load->view('admin/index', $data);
+    }
 }
