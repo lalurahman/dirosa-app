@@ -78,7 +78,7 @@ class Materi extends CI_Controller
             }
 
             
-            $data['kelas'] = $this->kelas_model->getKelasById($data['user']['id_user']);
+            $data['kelas'] = $this->kelas_model->getKelasById($data['kelas2']['id_progress_belajar']);
             $data['ustadz'] = $this->ustadz_model->getUstadz();
 
             $data['title'] = 'Pertemuan';
